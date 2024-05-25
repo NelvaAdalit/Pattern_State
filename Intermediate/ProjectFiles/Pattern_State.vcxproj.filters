@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Pattern_State.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{DAE4C95B-22D3-4737-A1B8-01E6B40EE5CD}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Pattern_State.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\Pattern_StateEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{C5907EE9-1463-41B8-9AE5-9A9A387E93E0}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Pattern_State">
+      <UniqueIdentifier>{7DD2BB79-6BDA-4B33-BDFD-CD5ACDABF28D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Pattern_State\CanionVali.cpp">
+      <Filter>Source\Pattern_State</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Pattern_State\CanionVali.h">
+      <Filter>Source\Pattern_State</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Pattern_State\IState.cpp">
+      <Filter>Source\Pattern_State</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Pattern_State\IState.h">
+      <Filter>Source\Pattern_State</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\Pattern_State\Pattern_State.Build.cs">
+      <Filter>Source\Pattern_State</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Pattern_State\Pattern_State.cpp">
+      <Filter>Source\Pattern_State</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Pattern_State\Pattern_State.h">
+      <Filter>Source\Pattern_State</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Pattern_State\Pattern_StateGameMode.cpp">
+      <Filter>Source\Pattern_State</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Pattern_State\Pattern_StateGameMode.h">
+      <Filter>Source\Pattern_State</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Pattern_State\Pattern_StatePawn.cpp">
+      <Filter>Source\Pattern_State</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Pattern_State\Pattern_StatePawn.h">
+      <Filter>Source\Pattern_State</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Pattern_State\Pattern_StateProjectile.cpp">
+      <Filter>Source\Pattern_State</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Pattern_State\Pattern_StateProjectile.h">
+      <Filter>Source\Pattern_State</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Pattern_State\StateCambiarPosicionCanion.cpp">
+      <Filter>Source\Pattern_State</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Pattern_State\StateCambiarPosicionCanion.h">
+      <Filter>Source\Pattern_State</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Pattern_State\StateDejarDisparo.cpp">
+      <Filter>Source\Pattern_State</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Pattern_State\StateDejarDisparo.h">
+      <Filter>Source\Pattern_State</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Pattern_State\StateDesaparecerCanion.cpp">
+      <Filter>Source\Pattern_State</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Pattern_State\StateDesaparecerCanion.h">
+      <Filter>Source\Pattern_State</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Pattern_State\StateDispararBala.cpp">
+      <Filter>Source\Pattern_State</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Pattern_State\StateDispararBala.h">
+      <Filter>Source\Pattern_State</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Pattern_State\StateDispararHielo.cpp">
+      <Filter>Source\Pattern_State</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Pattern_State\StateDispararHielo.h">
+      <Filter>Source\Pattern_State</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Pattern_State\StateDispararLazer.cpp">
+      <Filter>Source\Pattern_State</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Pattern_State\StateDispararLazer.h">
+      <Filter>Source\Pattern_State</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Pattern_State\StateDispararMisil.cpp">
+      <Filter>Source\Pattern_State</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Pattern_State\StateDispararMisil.h">
+      <Filter>Source\Pattern_State</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Pattern_State\StateVolverPosicionIncialCanion.cpp">
+      <Filter>Source\Pattern_State</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Pattern_State\StateVolverPosicionIncialCanion.h">
+      <Filter>Source\Pattern_State</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

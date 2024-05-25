@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\AVANZADA\\Pattern_State\\Source\\Pattern_State\\Pattern_State.Build.cs",
+		"D:\\AVANZADA\\Pattern_State\\Source\\Pattern_State.Target.cs",
+		"D:\\AVANZADA\\Pattern_State\\Source\\Pattern_StateEditor.Target.cs"
+	],
+	"EngineVersion": "4.27.2"
+}

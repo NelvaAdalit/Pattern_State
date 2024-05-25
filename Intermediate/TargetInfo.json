@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Pattern_State",
+			"Path": "D:\\AVANZADA\\Pattern_State\\Source\\Pattern_State.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "Pattern_StateEditor",
+			"Path": "D:\\AVANZADA\\Pattern_State\\Source\\Pattern_StateEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
