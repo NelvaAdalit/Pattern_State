@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Pattern_State.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{DAE4C95B-22D3-4737-A1B8-01E6B40EE5CD}</UniqueIdentifier>
+      <UniqueIdentifier>{5525A719-E84C-4CF9-A35C-135A5DA14AED}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Pattern_State.Target.cs">
       <Filter>Source</Filter>
@@ -11,8 +11,10 @@
     <None Include="..\..\Source\Pattern_StateEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{C5907EE9-1463-41B8-9AE5-9A9A387E93E0}</UniqueIdentifier>
+      <UniqueIdentifier>{F9D48C70-90C2-430D-835D-AD07C4CFB347}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Pattern_State">
-      <UniqueIdentifier>{7DD2BB79-6BDA-4B33-BDFD-CD5ACDABF28D}</UniqueIdentifier>
+      <UniqueIdentifier>{94AAC696-FF0B-47D0-B916-C0CCCA9EE3EF}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Pattern_State\CanionVali.cpp">
       <Filter>Source\Pattern_State</Filter>
@@ -71,6 +73,12 @@
     <ClInclude Include="..\..\Source\Pattern_State\Pattern_StateProjectile.h">
       <Filter>Source\Pattern_State</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Pattern_State\Proyectil.cpp">
+      <Filter>Source\Pattern_State</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Pattern_State\Proyectil.h">
+      <Filter>Source\Pattern_State</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Pattern_State\StateCambiarPosicionCanion.cpp">
       <Filter>Source\Pattern_State</Filter>
     </ClCompile>
@@ -93,12 +101,6 @@
       <Filter>Source\Pattern_State</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Pattern_State\StateDispararBala.h">
-      <Filter>Source\Pattern_State</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\Pattern_State\StateDispararHielo.cpp">
-      <Filter>Source\Pattern_State</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Pattern_State\StateDispararHielo.h">
       <Filter>Source\Pattern_State</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Pattern_State\StateDispararLazer.cpp">

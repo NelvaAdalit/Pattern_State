@@ -20,8 +20,10 @@ void EmptyLinkFunctionForGeneratedCodePattern_StatePawn() {}
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
+	ENGINE_API UClass* Z_Construct_UClass_UCapsuleComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UParticleSystem_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 // End Cross Module References
 	void APattern_StatePawn::StaticRegisterNativesAPattern_StatePawn()
 	{
@@ -48,6 +50,18 @@ void EmptyLinkFunctionForGeneratedCodePattern_StatePawn() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CameraBoom_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CameraBoom;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ShipCollision_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ShipCollision;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ShipExplosion_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ShipExplosion;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ExplosionSoundShip_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ExplosionSoundShip;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GunOffset_MetaData[];
 #endif
@@ -115,6 +129,32 @@ void EmptyLinkFunctionForGeneratedCodePattern_StatePawn() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_CameraBoom = { "CameraBoom", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APattern_StatePawn, CameraBoom), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_CameraBoom_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_CameraBoom_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_ShipCollision_MetaData[] = {
+		{ "Category", "Colision" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Pattern_StatePawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_ShipCollision = { "ShipCollision", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APattern_StatePawn, ShipCollision), Z_Construct_UClass_UCapsuleComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_ShipCollision_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_ShipCollision_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_ShipExplosion_MetaData[] = {
+		{ "Category", "Particula de Explosion" },
+		{ "Comment", "// para colisiones\n" },
+		{ "ModuleRelativePath", "Pattern_StatePawn.h" },
+		{ "ToolTip", "para colisiones" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_ShipExplosion = { "ShipExplosion", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APattern_StatePawn, ShipExplosion), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_ShipExplosion_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_ShipExplosion_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_ExplosionSoundShip_MetaData[] = {
+		{ "Category", "Audio_Explosion" },
+		{ "Comment", "// para la explosi?n\n" },
+		{ "ModuleRelativePath", "Pattern_StatePawn.h" },
+		{ "ToolTip", "para la explosi?n" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_ExplosionSoundShip = { "ExplosionSoundShip", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APattern_StatePawn, ExplosionSoundShip), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_ExplosionSoundShip_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_ExplosionSoundShip_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_GunOffset_MetaData[] = {
 		{ "Category", "Gameplay" },
 		{ "Comment", "/** Offset from the ships location to spawn projectiles */" },
@@ -154,6 +194,9 @@ void EmptyLinkFunctionForGeneratedCodePattern_StatePawn() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_ShipMeshComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_CameraComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_CameraBoom,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_ShipCollision,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_ShipExplosion,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_ExplosionSoundShip,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_GunOffset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_FireRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APattern_StatePawn_Statics::NewProp_MoveSpeed,
@@ -186,7 +229,7 @@ void EmptyLinkFunctionForGeneratedCodePattern_StatePawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APattern_StatePawn, 1403453010);
+	IMPLEMENT_CLASS(APattern_StatePawn, 2483333469);
 	template<> PATTERN_STATE_API UClass* StaticClass<APattern_StatePawn>()
 	{
 		return APattern_StatePawn::StaticClass();

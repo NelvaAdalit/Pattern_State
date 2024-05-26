@@ -35,6 +35,8 @@ void ACanionVali::EstablecerState(IIState* _State)
 
 void ACanionVali::CanionValiDispararHielo()
 {
+
+
 }
 
 void ACanionVali::CanionValiDispararBala()

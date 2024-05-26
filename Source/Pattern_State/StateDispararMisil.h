@@ -33,8 +33,10 @@ public:
 	void DispararMisil() override;
 	FORCEINLINE FString ObtenerEstado() override;
 
+
 private:
 	void DispararHielo() override {};
+
 	void DispararBala() override {};
 	void DispararLazer() override {};
 	void CambiarPosicionCanion() override {};

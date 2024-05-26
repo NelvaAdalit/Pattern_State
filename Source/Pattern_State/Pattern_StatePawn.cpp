@@ -11,7 +11,11 @@
 #include "Engine/CollisionProfile.h"
 #include "Engine/StaticMesh.h"
 #include "Kismet/GameplayStatics.h"
+#include "Components/CapsuleComponent.h"
+#include "Particles/ParticleSystem.h"
 #include "Sound/SoundBase.h"
+
+
 
 const FName APattern_StatePawn::MoveForwardBinding("MoveForward");
 const FName APattern_StatePawn::MoveRightBinding("MoveRight");
@@ -50,6 +54,7 @@ APattern_StatePawn::APattern_StatePawn()
 	GunOffset = FVector(90.f, 0.f, 0.f);
 	FireRate = 0.1f;
 	bCanFire = true;
+	LifePawn=1000.0f;
 }
 
 void APattern_StatePawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -65,6 +70,17 @@ void APattern_StatePawn::SetupPlayerInputComponent(class UInputComponent* Player
 
 void APattern_StatePawn::Tick(float DeltaSeconds)
 {
+
+	if(LifePawn<=0)
+	{
+		Componentes_Colision();
+	
+	}
+	GEngine->AddOnScreenDebugMessage(-1,0.f,FColor::Cyan,FString::Printf(TEXT("Vida:%f"),LifePawn));
+
+
+
+
 	// Find movement direction
 	const float ForwardValue = GetInputAxisValue(MoveForwardBinding);
 	const float RightValue = GetInputAxisValue(MoveRightBinding);
@@ -135,5 +151,24 @@ void APattern_StatePawn::FireShot(FVector FireDirection)
 void APattern_StatePawn::ShotTimerExpired()
 {
 	bCanFire = true;
+}
+
+void APattern_StatePawn::Damage(float Damage)
+{
+		LifePawn-=Damage;
+
+}
+
+void APattern_StatePawn::Componentes_Colision()
+{
+	//Efecto de Explosion 
+	if (ShipExplosion)
+		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ShipExplosion, GetActorTransform());
+	//Sonido de la explosion
+
+	if (ExplosionSoundShip != nullptr)
+		UGameplayStatics::PlaySoundAtLocation(this, ExplosionSoundShip, GetActorLocation());
+
+	this->Destroy();
 }
 

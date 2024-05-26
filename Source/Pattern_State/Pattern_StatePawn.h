@@ -22,6 +22,15 @@ class APattern_StatePawn : public APawn
 	/** Camera boom positioning the camera above the character */
 	UPROPERTY(Category = Camera, VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	class USpringArmComponent* CameraBoom;
+public:
+	UPROPERTY(EditAnywhere, Category = "Colision")
+	class UCapsuleComponent* ShipCollision; // para colisiones
+
+	UPROPERTY(EditAnywhere, Category = "Particula de Explosion")
+	class UParticleSystem* ShipExplosion; // para la explosión
+
+	UPROPERTY(EditAnywhere, Category = "Audio_Explosion")
+	class USoundBase* ExplosionSoundShip;    // sonido de explosión
 
 public:
 	APattern_StatePawn();
@@ -74,5 +83,11 @@ public:
 	FORCEINLINE class UCameraComponent* GetCameraComponent() const { return CameraComponent; }
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+public:
+	float LifePawn;
+	void Damage(float Damage);
+	void Componentes_Colision();
+	float GetHelth() const { return LifePawn; }		
+
 };
 
