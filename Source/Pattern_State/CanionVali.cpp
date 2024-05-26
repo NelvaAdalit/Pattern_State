@@ -41,6 +41,7 @@ void ACanionVali::Tick(float DeltaTime)
 void ACanionVali::EstablecerState(IIState* _State)
 {
 		StateActual = _State;
+
 }
 
 void ACanionVali::activarDispararHielo()
@@ -61,6 +62,7 @@ void ACanionVali::activarDispararLazer()
 void ACanionVali::activarDispararMisil()
 {
 	StateActual->activarDispararMisil();
+	
 }
 
 void ACanionVali::activarCambiarPosicionCanion()

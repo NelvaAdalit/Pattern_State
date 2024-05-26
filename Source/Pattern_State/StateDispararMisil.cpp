@@ -42,7 +42,7 @@ void AStateDispararMisil::EstablecerCanion(ACanionVali* _CanionVali)
 {
 	CanionVali = Cast<ACanionVali>(_CanionVali);//castear sirve para convertir un tipo de dato a otro
 	CanionVali->setDispararMisil(this);//se le asigna el estado al canion
-
+	CanionVali->GetActorLocation();
 }
 
 void AStateDispararMisil::activarDispararMisil()

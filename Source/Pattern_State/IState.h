@@ -46,4 +46,8 @@ public:
 
 
 	virtual FString ObtenerEstado() = 0;
+
+
+
+
 };

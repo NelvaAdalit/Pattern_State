@@ -33,6 +33,7 @@ void AStateDispararBala::EstablecerCanion(ACanionVali* _CanionVali)
 {
 	CanionVali = Cast<ACanionVali>(_CanionVali);//castear sirve para convertir un tipo de dato a otro
 	CanionVali->setDispararBala(this);
+	CanionVali->GetActorLocation();
 
 }
 

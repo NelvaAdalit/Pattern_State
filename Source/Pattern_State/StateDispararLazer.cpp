@@ -34,6 +34,7 @@ void AStateDispararLazer::EstablecerCanion(ACanionVali* _CanionVali)
 {
 	CanionVali = Cast<ACanionVali>(_CanionVali);//castear sirve para convertir un tipo de dato a otro
 	CanionVali->setDispararLazer(this);//se le asigna el estado al canion
+	CanionVali->GetActorLocation();
 
 }
 
