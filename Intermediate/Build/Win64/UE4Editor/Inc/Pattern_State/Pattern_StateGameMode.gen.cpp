@@ -54,11 +54,11 @@ void EmptyLinkFunctionForGeneratedCodePattern_StateGameMode() {}
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APattern_StateGameMode_Statics::NewProp_CanionVali_MetaData[] = {
-		{ "Category", "Game Mode" },
+		{ "Category", "Game mode" },
 		{ "ModuleRelativePath", "Pattern_StateGameMode.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APattern_StateGameMode_Statics::NewProp_CanionVali = { "CanionVali", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APattern_StateGameMode, CanionVali), Z_Construct_UClass_ACanionVali_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APattern_StateGameMode_Statics::NewProp_CanionVali_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APattern_StateGameMode_Statics::NewProp_CanionVali_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APattern_StateGameMode_Statics::NewProp_CanionVali = { "CanionVali", nullptr, (EPropertyFlags)0x0020080000020001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APattern_StateGameMode, CanionVali), Z_Construct_UClass_ACanionVali_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APattern_StateGameMode_Statics::NewProp_CanionVali_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APattern_StateGameMode_Statics::NewProp_CanionVali_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APattern_StateGameMode_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APattern_StateGameMode_Statics::NewProp_CanionVali,
 	};
@@ -89,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodePattern_StateGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APattern_StateGameMode, 3483265117);
+	IMPLEMENT_CLASS(APattern_StateGameMode, 2750271744);
 	template<> PATTERN_STATE_API UClass* StaticClass<APattern_StateGameMode>()
 	{
 		return APattern_StateGameMode::StaticClass();

@@ -18,7 +18,7 @@ protected:
 public:
 	virtual void Tick(float DeltaTime) override;
 protected:
-	UPROPERTY(VisibleAnywhre,Category="Game Mode")
+	UPROPERTY(VisibleAnywhere, Category = "Game mode")
 	class ACanionVali* CanionVali;
 
 };

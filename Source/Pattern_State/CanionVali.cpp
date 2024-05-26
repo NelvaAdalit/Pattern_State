@@ -18,7 +18,7 @@ ACanionVali::ACanionVali()
 	meshCanion = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("CanonMesh"));
 	meshCanion->SetupAttachment(RootComponent);
 	RootComponent = meshCanion;
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> CanonMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Plane.Shape_Plane'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> CanonMesh(TEXT("StaticMesh'/Game/Meshes/Shield.Shield'"));
 	meshCanion->SetStaticMesh(CanonMesh.Object);
 	SetActorRelativeScale3D(FVector(2.0f, 2.0f, 2.0f));
 

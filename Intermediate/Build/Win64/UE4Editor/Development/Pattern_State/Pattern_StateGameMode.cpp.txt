@@ -5,11 +5,7 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
 D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\Pattern_StateGameMode.generated.h
-D:\AVANZADA\Pattern_State\Source\Pattern_State\Pattern_StatePawn.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
-D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\Pattern_StatePawn.generated.h
+D:\AVANZADA\Pattern_State\Source\Pattern_State\CanionVali.h
+D:\AVANZADA\Pattern_State\Source\Pattern_State\IState.h
+D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\IState.generated.h
+D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\CanionVali.generated.h

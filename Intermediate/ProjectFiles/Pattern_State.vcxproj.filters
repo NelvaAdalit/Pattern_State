@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Pattern_State.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{C89178FF-D5AB-4D2D-8187-41747F125FA7}</UniqueIdentifier>
+      <UniqueIdentifier>{D2C14709-9863-495B-97A8-FE95E33294E9}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Pattern_State.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{C3211B95-ED1E-43AF-85FD-868E940D4C05}</UniqueIdentifier>
+      <UniqueIdentifier>{22EF5C93-AF8B-4584-A09A-9251AEB262E9}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Pattern_State">
-      <UniqueIdentifier>{50063F4A-2AFC-42F2-86BB-539ACB8A5C7A}</UniqueIdentifier>
+      <UniqueIdentifier>{000BA421-A0BF-4C6F-BBCB-82A559AA6209}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Pattern_State\CanionVali.cpp">
       <Filter>Source\Pattern_State</Filter>
