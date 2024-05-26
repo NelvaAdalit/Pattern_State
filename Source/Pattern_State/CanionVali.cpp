@@ -49,6 +49,7 @@ void ACanionVali::CanionValiDispararLazer()
 
 void ACanionVali::CanionValiDispararMisil()
 {
+
 }
 
 void ACanionVali::CanionValiCambiarPosicionCanion()

@@ -21,14 +21,11 @@ AProyectil::AProyectil()
 	Projectil_Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Projectil_Mesh"));
 	RootComponent = Projectil_Mesh;
 
-	static ConstructorHelpers::FObjectFinder<UStaticMesh>MeshAsset(TEXT("StaticMesh'/Game/TwinStick/Meshes/BulletEnemyLevel1.BulletEnemyLevel1'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh>MeshAsset(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Sphere.Shape_Sphere'"));
 	if (MeshAsset.Succeeded())
 	{
 		Projectil_Mesh->SetStaticMesh(MeshAsset.Object);
 
-		//// Modificar la escala del componente de malla
-		//FVector NewScale(-1.0f, -1.0f, -1.0f); // Escala modificada
-		//Projectil_Mesh->SetWorldScale3D(NewScale);
 	}
 	// Inicializar el sistema de partículas para la explosión
 	static ConstructorHelpers::FObjectFinder<UParticleSystem> ParticleAsset(TEXT("ParticleSystem'/Game/StarterContent/Particles/P_Explosion.P_Explosion'"));
