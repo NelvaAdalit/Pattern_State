@@ -13,6 +13,14 @@ class APattern_StateGameMode : public AGameModeBase
 
 public:
 	APattern_StateGameMode();
+protected:
+	virtual void BeginPlay() override;
+public:
+	virtual void Tick(float DeltaTime) override;
+protected:
+	UPROPERTY(VisibleAnywhre,Category="Game Mode")
+	class ACanionVali* CanionVali;
+
 };
 
 

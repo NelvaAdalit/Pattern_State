@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Pattern_State.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{C71A203D-514E-4D03-B1B2-12167B08D69C}</UniqueIdentifier>
+      <UniqueIdentifier>{C89178FF-D5AB-4D2D-8187-41747F125FA7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Pattern_State.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{DB5B53C7-1C54-4119-B645-847F1B855967}</UniqueIdentifier>
+      <UniqueIdentifier>{C3211B95-ED1E-43AF-85FD-868E940D4C05}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Pattern_State">
-      <UniqueIdentifier>{001C0A73-AFE8-48CF-97F1-D38E11DC4176}</UniqueIdentifier>
+      <UniqueIdentifier>{50063F4A-2AFC-42F2-86BB-539ACB8A5C7A}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Pattern_State\CanionVali.cpp">
       <Filter>Source\Pattern_State</Filter>
@@ -85,6 +85,12 @@
     <ClInclude Include="..\..\Source\Pattern_State\ProyectilBala.h">
       <Filter>Source\Pattern_State</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Pattern_State\ProyectilHielo.cpp">
+      <Filter>Source\Pattern_State</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Pattern_State\ProyectilHielo.h">
+      <Filter>Source\Pattern_State</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Pattern_State\ProyectilLazer.cpp">
       <Filter>Source\Pattern_State</Filter>
     </ClCompile>
@@ -115,6 +121,12 @@
     <ClInclude Include="..\..\Source\Pattern_State\StateDispararBala.h">
       <Filter>Source\Pattern_State</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Pattern_State\StateDispararHielo.cpp">
+      <Filter>Source\Pattern_State</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Pattern_State\StateDispararHielo.h">
+      <Filter>Source\Pattern_State</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Pattern_State\StateDispararLazer.cpp">
       <Filter>Source\Pattern_State</Filter>
     </ClCompile>
@@ -125,12 +137,6 @@
       <Filter>Source\Pattern_State</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Pattern_State\StateDispararMisil.h">
-      <Filter>Source\Pattern_State</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\Pattern_State\StateDispararHielo.cpp">
-      <Filter>Source\Pattern_State</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Pattern_State\StateDispararHielo.h">
       <Filter>Source\Pattern_State</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Pattern_State\StateVolverPosicionIncialCanion.cpp">

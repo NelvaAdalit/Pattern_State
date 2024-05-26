@@ -17,6 +17,8 @@ void EmptyLinkFunctionForGeneratedCodeStateDispararHielo() {}
 	PATTERN_STATE_API UClass* Z_Construct_UClass_AStateDispararHielo();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_Pattern_State();
+	PATTERN_STATE_API UClass* Z_Construct_UClass_ACanionVali_NoRegister();
+	PATTERN_STATE_API UClass* Z_Construct_UClass_UIState_NoRegister();
 // End Cross Module References
 	void AStateDispararHielo::StaticRegisterNativesAStateDispararHielo()
 	{
@@ -31,6 +33,12 @@ void EmptyLinkFunctionForGeneratedCodeStateDispararHielo() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CanionVali_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CanionVali;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -44,6 +52,19 @@ void EmptyLinkFunctionForGeneratedCodeStateDispararHielo() {}
 		{ "ModuleRelativePath", "StateDispararHielo.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStateDispararHielo_Statics::NewProp_CanionVali_MetaData[] = {
+		{ "Category", "Disparar Proyectil Hielo" },
+		{ "ModuleRelativePath", "StateDispararHielo.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AStateDispararHielo_Statics::NewProp_CanionVali = { "CanionVali", nullptr, (EPropertyFlags)0x0020080000020001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AStateDispararHielo, CanionVali), Z_Construct_UClass_ACanionVali_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AStateDispararHielo_Statics::NewProp_CanionVali_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStateDispararHielo_Statics::NewProp_CanionVali_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AStateDispararHielo_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStateDispararHielo_Statics::NewProp_CanionVali,
+	};
+		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AStateDispararHielo_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_UIState_NoRegister, (int32)VTABLE_OFFSET(AStateDispararHielo, IIState), false },
+		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AStateDispararHielo_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AStateDispararHielo>::IsAbstract,
 	};
@@ -53,12 +74,12 @@ void EmptyLinkFunctionForGeneratedCodeStateDispararHielo() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
-		nullptr,
+		Z_Construct_UClass_AStateDispararHielo_Statics::PropPointers,
+		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_AStateDispararHielo_Statics::PropPointers),
+		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_AStateDispararHielo_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_AStateDispararHielo_Statics::Class_MetaDataParams))
 	};
@@ -71,7 +92,7 @@ void EmptyLinkFunctionForGeneratedCodeStateDispararHielo() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AStateDispararHielo, 331895827);
+	IMPLEMENT_CLASS(AStateDispararHielo, 461629660);
 	template<> PATTERN_STATE_API UClass* StaticClass<AStateDispararHielo>()
 	{
 		return AStateDispararHielo::StaticClass();

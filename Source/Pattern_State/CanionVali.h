@@ -13,7 +13,9 @@ class PATTERN_STATE_API ACanionVali : public AActor
 	
 public:	
 	// Sets default values for this actor's properties
+
 	ACanionVali();
+	UStaticMeshComponent* meshCanion;
 
 protected:
 	// Called when the game starts or when spawned

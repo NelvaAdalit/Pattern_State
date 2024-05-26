@@ -16,7 +16,7 @@ public:
 	// Sets default values for this actor's properties
 	AStateDispararMisil();
 
-	UStaticMeshComponent* mallaCanion;
+	//UStaticMeshComponent* meshCanion;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -32,6 +32,7 @@ public:
 	//establecer el canion
 	void EstablecerCanion(class ACanionVali* _CanionVali) override;
 	void DispararMisil() override;
+	void DejarDeDisparar() override;
 	FORCEINLINE FString ObtenerEstado() override;
 
 
@@ -43,8 +44,8 @@ private:
 	void DispararHielo() override {};
 	void CambiarPosicionCanion() override {};
 	void VolverPosicionInicialCanion() override {};
-	void DejarDeDisparar() override {};
 	void DesaparecerCanion() override {};
+
 public:
 	int dureza;
 	int cantidadProyectiles;
@@ -54,6 +55,5 @@ public:
 	int NumberFired;
 	int direccion = 1;
 	float velocidad = 8;
-	 void ResetFire() ;
 	 FTimerHandle TimerHandle_ShotTimerExpired;
 };

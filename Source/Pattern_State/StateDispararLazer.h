@@ -31,6 +31,7 @@ public:
 	//establecer el canion
 	void EstablecerCanion(class ACanionVali* _CanionVali) override;
 	void DispararLazer() override;
+	void DejarDeDisparar() override;
 	FORCEINLINE FString ObtenerEstado() override;
 
 
@@ -42,6 +43,16 @@ private:
 	void DispararMisil() override {};
 	void CambiarPosicionCanion() override {};
 	void VolverPosicionInicialCanion() override {};
-	void DejarDeDisparar() override {};
 	void DesaparecerCanion() override {};
+
+public:
+	int dureza;
+	int cantidadProyectiles;
+	uint32 bCanFire : 1;//entero de 32 bits
+	float FireRate;
+	int MaxProjectile;
+	int NumberFired;
+	int direccion = 1;
+	float velocidad = 8;
+	FTimerHandle TimerHandle_ShotTimerExpired;
 };

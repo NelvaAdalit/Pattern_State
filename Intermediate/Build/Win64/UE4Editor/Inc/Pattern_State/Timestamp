@@ -4,8 +4,9 @@ D:\AVANZADA\Pattern_State\Source\Pattern_State\Pattern_StatePawn.h
 D:\AVANZADA\Pattern_State\Source\Pattern_State\Pattern_StateProjectile.h
 D:\AVANZADA\Pattern_State\Source\Pattern_State\Proyectil.h
 D:\AVANZADA\Pattern_State\Source\Pattern_State\ProyectilBala.h
-D:\AVANZADA\Pattern_State\Source\Pattern_State\ProyectilLazer.h
+D:\AVANZADA\Pattern_State\Source\Pattern_State\ProyectilHielo.h
 D:\AVANZADA\Pattern_State\Source\Pattern_State\StateCambiarPosicionCanion.h
+D:\AVANZADA\Pattern_State\Source\Pattern_State\ProyectilLazer.h
 D:\AVANZADA\Pattern_State\Source\Pattern_State\StateDejarDisparo.h
 D:\AVANZADA\Pattern_State\Source\Pattern_State\StateDesaparecerCanion.h
 D:\AVANZADA\Pattern_State\Source\Pattern_State\StateDispararBala.h

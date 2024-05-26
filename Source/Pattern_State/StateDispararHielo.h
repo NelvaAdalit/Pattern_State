@@ -4,10 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "IState.h"
 #include "StateDispararHielo.generated.h"
 
 UCLASS()
-class PATTERN_STATE_API AStateDispararHielo : public AActor
+class PATTERN_STATE_API AStateDispararHielo : public AActor, public IIState
 {
 	GENERATED_BODY()
 	
@@ -22,5 +23,32 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+protected:
+	UPROPERTY(VisibleAnywhere, Category = "Disparar Proyectil Hielo")
+	class ACanionVali* CanionVali;
+public:
+	void EstablecerCanion(class ACanionVali* _CanionVali) override;
+	void DispararHielo() override;
+	void DejarDeDisparar() override;
+	FORCEINLINE FString ObtenerEstado() override;
+
+private:
+	void DispararBala() override {};
+	void DispararLazer() override {};
+	void DispararMisil() override {};
+	void CambiarPosicionCanion() override {};
+	void VolverPosicionInicialCanion() override {};
+	void DesaparecerCanion() override {};
+
+public:
+	int dureza;
+	int cantidadProyectiles;
+	uint32 bCanFire : 1;//entero de 32 bits
+	float FireRate;
+	int MaxProjectile;
+	int NumberFired;
+	int direccion = 1;
+	float velocidad = 8;
+	FTimerHandle TimerHandle_ShotTimerExpired;
 
 };

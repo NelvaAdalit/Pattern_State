@@ -9,16 +9,17 @@ AStateDispararMisil::AStateDispararMisil()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	/*meshCanion = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("CanonMesh"));*/
+	//meshCanion->SetupAttachment(RootComponent);
+	//static ConstructorHelpers::FObjectFinder<UStaticMesh> CanonMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cone.Shape_Cone'"));
+	/*meshCanion->SetStaticMesh(CanonMesh.Object);*/
+	/*RootComponent = meshCanion;*/
 
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> CanonMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cone.Shape_Cone'"));
-	mallaCanion->SetStaticMesh(CanonMesh.Object);
-	mallaCanion = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("CanonMesh"));
-	mallaCanion->SetupAttachment(RootComponent);
-	RootComponent = mallaCanion;
 	MaxProjectile = 8;
 	NumberFired = 0;
 	bCanFire = true;
-	SetActorRelativeScale3D(FVector(2.0f, 2.0f, 2.0f));
+
+	//SetActorRelativeScale3D(FVector(2.0f, 2.0f, 2.0f));
 
 }
 
@@ -38,6 +39,7 @@ void AStateDispararMisil::Tick(float DeltaTime)
 
 void AStateDispararMisil::EstablecerCanion(ACanionVali* _CanionVali)
 {
+		CanionVali = _CanionVali;
 
 }
 
@@ -59,7 +61,7 @@ void AStateDispararMisil::DispararMisil()
 
 			// Establecer el temporizador para el próximo disparo
 			FTimerHandle TimerHandle;
-			GetWorldTimerManager().SetTimer(TimerHandle, this, &AStateDispararMisil::ResetFire, rand() % 6 + 1, false);
+			GetWorldTimerManager().SetTimer(TimerHandle, this, &AStateDispararMisil::DejarDeDisparar, rand() % 6 + 1, false);
 
 
 
@@ -70,15 +72,7 @@ void AStateDispararMisil::DispararMisil()
 	}
 }
 
-FString AStateDispararMisil::ObtenerEstado()
-{
-	return FString();
-}
-
-
-
-
-void AStateDispararMisil::ResetFire()
+void AStateDispararMisil::DejarDeDisparar()
 {
 	if (NumberFired < MaxProjectile)
 	{
@@ -91,4 +85,13 @@ void AStateDispararMisil::ResetFire()
 		bCanFire = false;
 	}
 }
+
+FString AStateDispararMisil::ObtenerEstado()
+{
+	return "Canion con Proyectil Misil";
+}
+
+
+
+
 

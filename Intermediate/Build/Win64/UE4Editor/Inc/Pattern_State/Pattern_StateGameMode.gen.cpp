@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodePattern_StateGameMode() {}
 	PATTERN_STATE_API UClass* Z_Construct_UClass_APattern_StateGameMode();
 	ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
 	UPackage* Z_Construct_UPackage__Script_Pattern_State();
+	PATTERN_STATE_API UClass* Z_Construct_UClass_ACanionVali_NoRegister();
 // End Cross Module References
 	void APattern_StateGameMode::StaticRegisterNativesAPattern_StateGameMode()
 	{
@@ -31,6 +32,11 @@ void EmptyLinkFunctionForGeneratedCodePattern_StateGameMode() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CanionVali_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CanionVali;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -46,6 +52,16 @@ void EmptyLinkFunctionForGeneratedCodePattern_StateGameMode() {}
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APattern_StateGameMode_Statics::NewProp_CanionVali_MetaData[] = {
+		{ "Category", "Game Mode" },
+		{ "ModuleRelativePath", "Pattern_StateGameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APattern_StateGameMode_Statics::NewProp_CanionVali = { "CanionVali", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APattern_StateGameMode, CanionVali), Z_Construct_UClass_ACanionVali_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APattern_StateGameMode_Statics::NewProp_CanionVali_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APattern_StateGameMode_Statics::NewProp_CanionVali_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APattern_StateGameMode_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APattern_StateGameMode_Statics::NewProp_CanionVali,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_APattern_StateGameMode_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<APattern_StateGameMode>::IsAbstract,
 	};
@@ -55,11 +71,11 @@ void EmptyLinkFunctionForGeneratedCodePattern_StateGameMode() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_APattern_StateGameMode_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_APattern_StateGameMode_Statics::PropPointers),
 		0,
 		0x008802ACu,
 		METADATA_PARAMS(Z_Construct_UClass_APattern_StateGameMode_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_APattern_StateGameMode_Statics::Class_MetaDataParams))
@@ -73,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodePattern_StateGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APattern_StateGameMode, 843266436);
+	IMPLEMENT_CLASS(APattern_StateGameMode, 3483265117);
 	template<> PATTERN_STATE_API UClass* StaticClass<APattern_StateGameMode>()
 	{
 		return APattern_StateGameMode::StaticClass();
