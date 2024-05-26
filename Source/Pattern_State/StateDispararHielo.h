@@ -11,8 +11,8 @@ UCLASS()
 class PATTERN_STATE_API AStateDispararHielo : public AActor, public IIState
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	AStateDispararHielo();
 
@@ -20,25 +20,41 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-protected:
+private:
 	UPROPERTY(VisibleAnywhere, Category = "Disparar Proyectil Hielo")
 	class ACanionVali* CanionVali;
+
 public:
-	void EstablecerCanion(class ACanionVali* _CanionVali) override;
-	void DispararHielo() override;
-	void DejarDeDisparar() override;
-	FORCEINLINE FString ObtenerEstado() override;
+	virtual void EstablecerCanion(class ACanionVali* _CanionVali) override;
+
+	void activarDispararHielo() override;
+
+	virtual  FString ObtenerEstado() override;
+
+	void DesactivarDisparoHielo() override ;
 
 private:
-	void DispararBala() override {};
-	void DispararLazer() override {};
-	void DispararMisil() override {};
-	void CambiarPosicionCanion() override {};
-	void VolverPosicionInicialCanion() override {};
-	void DesaparecerCanion() override {};
+	virtual void activarDispararBala() override {};
+	virtual void activarDispararLazer() override {};
+	virtual void activarDispararMisil() override {};
+	virtual void activarCambiarPosicionCanion() override {};
+	virtual void activarVolverPosiconInicialCanion() override {};
+	virtual void activarDesaparecerCanion() override {};
+
+	void InicializarCanion(FString _State) override {};
+
+	virtual void DesactivarDisparoBala() override {};
+	virtual void DesactivarDisparoLazer() override {};
+	virtual void DesactivarDisparoMisil() override {};
+	virtual void DesactivarCambiarPosicionCanion() override {};
+	virtual void DesactivarVolverPosiconInicialCanion() override {};
+	virtual void DesactivarDesaparecerCanion() override {};
+
+
+
 
 public:
 	int dureza;

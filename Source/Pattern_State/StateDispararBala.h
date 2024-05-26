@@ -30,20 +30,32 @@ protected:
 public:
 	//establecer el canion
 	void EstablecerCanion(class ACanionVali* _CanionVali) override;
-	void DispararBala() override;
-	void DejarDeDisparar() override ;
+	void activarDispararBala() override;
+	void DesactivarDisparoBala() override ;
 	FORCEINLINE FString ObtenerEstado() override;
 
 
 
 
 private:
-	void DispararHielo() override {};
-	void DispararLazer() override {};
-	void DispararMisil() override {};
-	void CambiarPosicionCanion() override {};
-	void VolverPosicionInicialCanion() override {};
-	void DesaparecerCanion() override {};
+	void activarDispararHielo() override {};
+	void activarDispararLazer() override {};
+	void activarDispararMisil() override {};
+	void activarCambiarPosicionCanion() override {};
+	void activarVolverPosiconInicialCanion() override {};
+	void activarDesaparecerCanion() override {};
+
+	void InicializarCanion(FString _Estados) override {};
+
+	void DesactivarDisparoHielo() override {};
+	void DesactivarDisparoLazer() override {};
+	void DesactivarDisparoMisil() override {};
+	void DesactivarCambiarPosicionCanion() override {};
+	void DesactivarVolverPosiconInicialCanion() override {};
+	void DesactivarDesaparecerCanion() override {};
+
+
+
 public:
 	int dureza;
 	int cantidadProyectiles;

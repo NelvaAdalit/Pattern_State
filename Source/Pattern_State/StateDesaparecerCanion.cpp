@@ -2,7 +2,7 @@
 
 
 #include "StateDesaparecerCanion.h"
-
+#include "CanionVali.h"
 // Sets default values
 AStateDesaparecerCanion::AStateDesaparecerCanion()
 {
@@ -27,14 +27,24 @@ void AStateDesaparecerCanion::Tick(float DeltaTime)
 
 void AStateDesaparecerCanion::EstablecerCanion(ACanionVali* _CanionVali)
 {
+
+	CanionVali = Cast<ACanionVali>(_CanionVali);//castear sirve para convertir un tipo de dato a otro
+	CanionVali->setDesaparecerCanion(this);
 }
 
-void AStateDesaparecerCanion::DesaparecerCanion()
+void AStateDesaparecerCanion::activarDesaparecerCanion()
 {
 }
+
+
 
 FString AStateDesaparecerCanion::ObtenerEstado()
 {
 	return FString();
+}
+
+void AStateDesaparecerCanion::DesactivarDesaparecerCanion()
+{
+
 }
 

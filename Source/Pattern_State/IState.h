@@ -24,13 +24,26 @@ class PATTERN_STATE_API IIState
 public:
 
     virtual void EstablecerCanion(class ACanionVali* _CanionVali)=0;
-	virtual void DispararHielo() = 0;
-	virtual void DispararBala() = 0;
-	virtual void DispararLazer() = 0;
-	virtual void DispararMisil() = 0;
-	virtual void CambiarPosicionCanion() = 0;
-	virtual void VolverPosicionInicialCanion() = 0;
-	virtual void DejarDeDisparar() = 0;
-	virtual void DesaparecerCanion() = 0;
+
+	
+
+	virtual void activarDispararHielo()=0;
+	virtual void activarDispararBala()=0;
+	virtual void activarDispararLazer()=0;
+	virtual void activarDispararMisil()=0;
+	virtual void activarCambiarPosicionCanion()=0;
+	virtual void activarVolverPosiconInicialCanion()=0;
+	virtual void activarDesaparecerCanion()=0;
+	virtual void InicializarCanion(FString _State)=0;
+	virtual void DesactivarDisparoHielo()=0;
+	virtual void DesactivarDisparoBala()=0;
+	virtual void DesactivarDisparoLazer()=0;
+	virtual void DesactivarDisparoMisil()=0;
+	virtual void DesactivarCambiarPosicionCanion()=0;
+	virtual void DesactivarVolverPosiconInicialCanion()=0;
+	virtual void DesactivarDesaparecerCanion()=0;
+
+
+
 	virtual FString ObtenerEstado() = 0;
 };

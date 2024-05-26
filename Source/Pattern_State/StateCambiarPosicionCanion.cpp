@@ -2,7 +2,7 @@
 
 
 #include "StateCambiarPosicionCanion.h"
-
+#include "CanionVali.h"
 // Sets default values
 AStateCambiarPosicionCanion::AStateCambiarPosicionCanion()
 {
@@ -27,14 +27,22 @@ void AStateCambiarPosicionCanion::Tick(float DeltaTime)
 
 void AStateCambiarPosicionCanion::EstablecerCanion(ACanionVali* _CanionVali)
 {
+	CanionVali = Cast<ACanionVali>(_CanionVali);//castear sirve para convertir un tipo de dato a otro
+	CanionVali->setCambiarPosicionCanion(this);//se le asigna el estado al canion
 }
 
-void AStateCambiarPosicionCanion::CambiarPosicionCanion()
+void AStateCambiarPosicionCanion::activarCambiarPosicionCanion()
 {
 }
+
+
 
 FString AStateCambiarPosicionCanion::ObtenerEstado()
 {
 	return FString();
+}
+
+void AStateCambiarPosicionCanion::DesactivarCambiarPosicionCanion()
+{
 }
 

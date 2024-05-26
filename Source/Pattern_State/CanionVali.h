@@ -24,36 +24,59 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-public:
-	void StarStates(FString _States);
-	IIState* DispararHielo;
-	IIState* DispararBala;
-	IIState* DispararLazer;
-	IIState* DispararMisil;
-	IIState* CambiarPosicionCanion;
-	IIState* VolverPosiconInicialCanion;
-	IIState* DesaparecerCanion;
-	IIState*StateActual;
-	FORCEINLINE void EstablecerState(IIState* _State);
+private:
 	
+	IIState* StateDispararHielo;
+	IIState* StateDispararBala;
+	IIState*  StateDispararLazer;
+	IIState* StateDispararMisil;
+	IIState* StateCambiarPosicionCanion;
+	IIState* StateVolverPosiconInicialCanion;
+	IIState* StateDesaparecerCanion;
+	IIState*StateActual;
 
-	void CanionValiDispararHielo();
-	void CanionValiDispararBala();
-	void CanionValiDispararLazer();
-	void CanionValiDispararMisil();
-	void CanionValiCambiarPosicionCanion();
-	void CanionValiVolverPosiconInicialCanion();
-	void CanionValiDesaparecerCanion();
+public:
 
-	//funciones para obtener los estados
-	FORCEINLINE IIState* C_ObtenerState();
-	FORCEINLINE IIState* C_ObtenerDispararHielo();
-	FORCEINLINE IIState* C_ObtenerDispararBala();
-	FORCEINLINE IIState* C_ObtenerDispararLazer();
-	FORCEINLINE IIState* C_ObtenerDispararMisil();
-	FORCEINLINE IIState* C_ObtenerCambiarPosicionCanion();
-	FORCEINLINE IIState* C_ObtenerVolverPosiconInicialCanion();
-	FORCEINLINE IIState* C_ObtenerDesaparecerCanion();
-	FORCEINLINE FString C_ObtenerNombreStateActual();
+	IIState* getState() { return StateActual; }
+	FORCEINLINE void EstablecerState(IIState* _State);//SET
+	
+	IIState*getDispararHielo() { return StateDispararHielo; }
+	IIState*getDispararBala() { return StateDispararBala; }
+	IIState*getDispararLazer() { return StateDispararLazer; }
+	IIState*getDispararMisil() { return StateDispararMisil; }
+
+	IIState*getCambiarPosicionCanion() { return StateCambiarPosicionCanion; }					
+	IIState*getVolverPosiconInicialCanion() { return StateVolverPosiconInicialCanion; }
+	IIState*getDesaparecerCanion() { return StateDesaparecerCanion; }
+
+	void setDispararHielo(IIState* _StateDispararHielo) { StateDispararHielo = _StateDispararHielo; }
+	void setDispararBala(IIState* _StateDispararBala) { StateDispararBala = _StateDispararBala; }
+	void setDispararLazer(IIState* _StateDispararLazer) { StateDispararLazer = _StateDispararLazer; }
+	void setDispararMisil(IIState* _StateDispararMisil) { StateDispararMisil = _StateDispararMisil; }
+	void setCambiarPosicionCanion(IIState* _StateCambiarPosicionCanion) { StateCambiarPosicionCanion = _StateCambiarPosicionCanion; }
+	void setVolverPosiconInicialCanion(IIState* _StateVolverPosiconInicialCanion) { StateVolverPosiconInicialCanion = _StateVolverPosiconInicialCanion; }
+	void setDesaparecerCanion(IIState* _StateDesaparecerCanion) { StateDesaparecerCanion = _StateDesaparecerCanion; }
+
+	void activarDispararHielo();
+	void activarDispararBala();
+	void activarDispararLazer();
+	void activarDispararMisil();
+	void activarCambiarPosicionCanion();
+	void activarVolverPosiconInicialCanion();
+	void activarDesaparecerCanion();
+   void InicializarCanion(FString _State) ;
+
+	void DesactivarDisparoHielo();
+	void DesactivarDisparoBala();
+	void DesactivarDisparoLazer();
+	void DesactivarDisparoMisil();
+	void DesactivarCambiarPosicionCanion();
+	void DesactivarVolverPosiconInicialCanion();
+	void DesactivarDesaparecerCanion();
+
+
+
+
+
 
 };

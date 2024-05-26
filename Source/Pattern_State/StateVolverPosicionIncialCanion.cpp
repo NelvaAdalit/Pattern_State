@@ -2,6 +2,7 @@
 
 
 #include "StateVolverPosicionIncialCanion.h"
+#include "CanionVali.h"
 
 // Sets default values
 AStateVolverPosicionIncialCanion::AStateVolverPosicionIncialCanion()
@@ -27,14 +28,23 @@ void AStateVolverPosicionIncialCanion::Tick(float DeltaTime)
 
 void AStateVolverPosicionIncialCanion::EstablecerCanion(ACanionVali* _CanionVali)
 {
+	CanionVali = Cast<ACanionVali>(_CanionVali);//castear sirve para convertir un tipo de dato a otro
+	CanionVali->setVolverPosiconInicialCanion(this);//se le asigna el estado al canion
 }
 
-void AStateVolverPosicionIncialCanion::VolverPosicionInicialCanion()
+void AStateVolverPosicionIncialCanion::activarVolverPosiconInicialCanion()
 {
+
 }
+
+
 
 FString AStateVolverPosicionIncialCanion::ObtenerEstado()
 {
 	return FString();
+}
+
+void AStateVolverPosicionIncialCanion::DesactivarVolverPosiconInicialCanion()
+{
 }
 

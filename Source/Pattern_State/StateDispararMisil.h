@@ -17,6 +17,7 @@ public:
 	AStateDispararMisil();
 
 	UStaticMeshComponent* meshCanion;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -29,22 +30,33 @@ protected:
 	class ACanionVali* CanionVali;
 
 public:
-	//establecer el canion
-	void EstablecerCanion(class ACanionVali* _CanionVali) override;
-	void DispararMisil() override;
-	void DejarDeDisparar() override;
-	FORCEINLINE FString ObtenerEstado() override;
+	virtual void EstablecerCanion(class ACanionVali* _CanionVali) override;
+
+	void activarDispararMisil() override;
+	void DesactivarDisparoMisil() override;
+	virtual  FString ObtenerEstado() override;
 
 
 
 private:
+	virtual void activarDispararBala() override {};
+	virtual void activarDispararLazer() override {};
+	virtual void activarDispararHielo() override {};
+	virtual void activarCambiarPosicionCanion() override {};
+	virtual void activarVolverPosiconInicialCanion() override {};
+	virtual void activarDesaparecerCanion() override {};
 
-	void DispararBala() override {};
-	void DispararLazer() override {};
-	void DispararHielo() override {};
-	void CambiarPosicionCanion() override {};
-	void VolverPosicionInicialCanion() override {};
-	void DesaparecerCanion() override {};
+	void InicializarCanion(FString _State) override {};
+
+
+	virtual void DesactivarDisparoBala() override {};
+	virtual void DesactivarDisparoLazer() override {};
+	virtual void DesactivarDisparoHielo() override {};
+	virtual void DesactivarCambiarPosicionCanion() override {};
+	virtual void DesactivarVolverPosiconInicialCanion() override {};
+	virtual void DesactivarDesaparecerCanion() override {};
+
+
 
 public:
 	int dureza;

@@ -20,7 +20,7 @@ ACanionVali::ACanionVali()
 	RootComponent = meshCanion;
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> CanonMesh(TEXT("StaticMesh'/Game/Meshes/Shield.Shield'"));
 	meshCanion->SetStaticMesh(CanonMesh.Object);
-	SetActorRelativeScale3D(FVector(2.0f, 2.0f, 2.0f));
+	SetActorRelativeScale3D(FVector(4.0f, 4.0f,4.0f));
 
 }
 
@@ -38,138 +38,134 @@ void ACanionVali::Tick(float DeltaTime)
 
 }
 
-void ACanionVali::StarStates(FString _States)
-{
-	if(_States.Equals("DispararHielo")){
-
-		DispararHielo=GetWorld()->SpawnActor<AStateDispararHielo>(AStateDispararHielo::StaticClass());
-		DispararHielo->EstablecerCanion (this);
-		EstablecerState(DispararHielo);
-    }
-	if (_States.Equals("DispararBala")) {
-
-		DispararBala = GetWorld()->SpawnActor<AStateDispararBala>(AStateDispararBala::StaticClass());
-		DispararBala->EstablecerCanion(this);
-		EstablecerState(DispararBala);
-	}
-	if (_States.Equals("DispararLazer")) {
-		DispararLazer= GetWorld()->SpawnActor<AStateDispararLazer>(AStateDispararLazer::StaticClass());
-		DispararLazer->EstablecerCanion(this);
-		EstablecerState(DispararLazer);	
-	
-	}
-	if (_States.Equals("DispararMisil")) {
-		DispararMisil = GetWorld()->SpawnActor<AStateDispararMisil>(AStateDispararMisil::StaticClass());
-		DispararMisil->EstablecerCanion(this);
-		EstablecerState(DispararMisil);
-	}	
-	if (_States.Equals("CambiarPosicionCanion")) {
-		CambiarPosicionCanion = GetWorld()->SpawnActor<AStateCambiarPosicionCanion>(AStateCambiarPosicionCanion::StaticClass());
-		CambiarPosicionCanion->EstablecerCanion(this);
-		EstablecerState(CambiarPosicionCanion);
-	}
-	if (_States.Equals("VolverPosicionIncialCanion")) {
-		VolverPosiconInicialCanion = GetWorld()->SpawnActor<AStateVolverPosicionIncialCanion>(AStateVolverPosicionIncialCanion::StaticClass());
-		VolverPosiconInicialCanion->EstablecerCanion(this);
-		EstablecerState(VolverPosiconInicialCanion);
-	}
-	if (_States.Equals("DesaparecerCanion")) {
-		DesaparecerCanion = GetWorld()->SpawnActor<AStateDesaparecerCanion>(AStateDesaparecerCanion::StaticClass());
-		DesaparecerCanion->EstablecerCanion(this);
-		EstablecerState(DesaparecerCanion);
-	}
-}
-
 void ACanionVali::EstablecerState(IIState* _State)
 {
-	StateActual = _State;
+		StateActual = _State;
 }
 
-void ACanionVali::CanionValiDispararHielo()
+void ACanionVali::activarDispararHielo()
 {
-	StateActual->DispararHielo();
-
+	StateActual->activarDispararHielo();
 }
 
-void ACanionVali::CanionValiDispararBala()
+void ACanionVali::activarDispararBala()
 {
-	StateActual->DispararBala();
+		StateActual->activarDispararBala();
 }
 
-void ACanionVali::CanionValiDispararLazer()
+void ACanionVali::activarDispararLazer()
 {
-		StateActual->DispararLazer();
+	StateActual->activarDispararLazer();
 }
 
-void ACanionVali::CanionValiDispararMisil()
+void ACanionVali::activarDispararMisil()
 {
-		StateActual->DispararMisil();
-
+	StateActual->activarDispararMisil();
 }
 
-void ACanionVali::CanionValiCambiarPosicionCanion()
+void ACanionVali::activarCambiarPosicionCanion()
 {
-	StateActual->CambiarPosicionCanion();
+	StateActual->activarCambiarPosicionCanion();
 }
 
-void ACanionVali::CanionValiVolverPosiconInicialCanion()
+void ACanionVali::activarVolverPosiconInicialCanion()
 {
-	StateActual->VolverPosicionInicialCanion();
+	StateActual->activarVolverPosiconInicialCanion();
 }
 
-void ACanionVali::CanionValiDesaparecerCanion()
+void ACanionVali::activarDesaparecerCanion()
 {
-	StateActual->DesaparecerCanion();
+	StateActual->activarDesaparecerCanion();
 }
 
-IIState* ACanionVali::C_ObtenerState()
-{
-	return StateActual;
-}
 
-IIState* ACanionVali::C_ObtenerDispararHielo()
-{
-	return DispararHielo;
-}
 
-IIState* ACanionVali::C_ObtenerDispararBala()
-{
-	return DispararBala;
-}
+void ACanionVali::InicializarCanion(FString _State)
 
-IIState* ACanionVali::C_ObtenerDispararLazer()
 {
-	return DispararLazer;
-}
-
-IIState* ACanionVali::C_ObtenerDispararMisil()
-{
-	return DispararMisil;
-}
-
-IIState* ACanionVali::C_ObtenerCambiarPosicionCanion()
-{
-	return CambiarPosicionCanion;
-}
-
-IIState* ACanionVali::C_ObtenerVolverPosiconInicialCanion()
-{
-	return VolverPosiconInicialCanion;
-}
-
-IIState* ACanionVali::C_ObtenerDesaparecerCanion()
-{
-	return DesaparecerCanion;
-}
-
-FString ACanionVali::C_ObtenerNombreStateActual()
-{
-	if (StateActual) {
-		return StateActual->ObtenerEstado();
+	if (_State.Equals("Dispararhielo")) {
+		StateDispararHielo= GetWorld()->SpawnActor<AStateDispararHielo>(AStateDispararHielo::StaticClass());
+		StateDispararHielo->EstablecerCanion(this);
+		EstablecerState(StateDispararHielo);
 	}
-	else {
-		return "No hay estado actual";
-	
-	
+	if (_State.Equals("DispararBala")) {
+		StateDispararBala = GetWorld()->SpawnActor<AStateDispararBala>(AStateDispararBala::StaticClass());
+		StateDispararBala->EstablecerCanion(this);
+		EstablecerState(StateDispararBala);
 	}
+	if (_State.Equals("DispararLazer")) {
+		StateDispararLazer = GetWorld()->SpawnActor<AStateDispararLazer>(AStateDispararLazer::StaticClass());
+		StateDispararLazer->EstablecerCanion(this);
+		EstablecerState(StateDispararLazer);
+	}
+	if (_State.Equals("DispararMisil")) {
+		StateDispararMisil = GetWorld()->SpawnActor<AStateDispararMisil>(AStateDispararMisil::StaticClass());
+		StateDispararMisil->EstablecerCanion(this);
+		EstablecerState(StateDispararMisil);
+	}
+	if (_State.Equals("CambiarPosicionCanion")) {
+		StateCambiarPosicionCanion = GetWorld()->SpawnActor<AStateCambiarPosicionCanion>(AStateCambiarPosicionCanion::StaticClass());
+		StateCambiarPosicionCanion->EstablecerCanion(this);
+		EstablecerState(StateCambiarPosicionCanion);
+	}	
+	if (_State.Equals("VolverPosicionInicialCanion")) {
+		StateVolverPosiconInicialCanion = GetWorld()->SpawnActor<AStateVolverPosicionIncialCanion>(AStateVolverPosicionIncialCanion::StaticClass());
+		StateVolverPosiconInicialCanion->EstablecerCanion(this);
+		EstablecerState(StateVolverPosiconInicialCanion);
+	}
+	if (_State.Equals("DesaparecerCanion")) {
+		StateDesaparecerCanion = GetWorld()->SpawnActor<AStateDesaparecerCanion>(AStateDesaparecerCanion::StaticClass());
+		StateDesaparecerCanion->EstablecerCanion(this);
+		EstablecerState(StateDesaparecerCanion);
+	}
+
+	//StateDispararHielo = GetWorld()->SpawnActor<AStateDispararHielo>(AStateDispararHielo::StaticClass());
+ //   StateDispararHielo->EstablecerCanion(this);
+	//StateDispararBala = GetWorld()->SpawnActor<AStateDispararBala>(AStateDispararBala::StaticClass());
+	//StateDispararBala->EstablecerCanion(this);
+	//StateDispararLazer = GetWorld()->SpawnActor<AStateDispararLazer>(AStateDispararLazer::StaticClass());
+	//StateDispararLazer->EstablecerCanion(this);
+	//StateDispararMisil = GetWorld()->SpawnActor<AStateDispararMisil>(AStateDispararMisil::StaticClass());
+	//StateDispararMisil->EstablecerCanion(this);
+	//StateCambiarPosicionCanion = GetWorld()->SpawnActor<AStateCambiarPosicionCanion>(AStateCambiarPosicionCanion::StaticClass());
+	//StateCambiarPosicionCanion->EstablecerCanion(this);
+	//StateVolverPosiconInicialCanion = GetWorld()->SpawnActor<AStateVolverPosicionIncialCanion>(AStateVolverPosicionIncialCanion::StaticClass());
+	//StateVolverPosiconInicialCanion->EstablecerCanion(this);
+	
+
+
+}
+
+void ACanionVali::DesactivarDisparoHielo()
+{
+	StateActual->DesactivarDisparoHielo();
+}
+
+void ACanionVali::DesactivarDisparoBala()
+{
+	StateActual->DesactivarDisparoBala();
+}
+
+void ACanionVali::DesactivarDisparoLazer()
+{
+}
+
+void ACanionVali::DesactivarDisparoMisil()
+{
+	StateActual->DesactivarDisparoMisil();
+}
+
+void ACanionVali::DesactivarCambiarPosicionCanion()
+{
+	StateActual->DesactivarCambiarPosicionCanion();
+}
+
+void ACanionVali::DesactivarVolverPosiconInicialCanion()
+{
+	StateActual->DesactivarVolverPosiconInicialCanion();
+}
+
+void ACanionVali::DesactivarDesaparecerCanion()
+{
+	StateActual->DesactivarDesaparecerCanion();
 }
