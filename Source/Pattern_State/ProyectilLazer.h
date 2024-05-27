@@ -56,7 +56,7 @@ public:
 
 public:
 
-	float Danio_D_B;
+
 
 	float DanioProvocado;
 

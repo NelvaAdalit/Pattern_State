@@ -34,7 +34,7 @@ void AStateDispararBala::EstablecerCanion(ACanionVali* _CanionVali)
 	CanionVali = Cast<ACanionVali>(_CanionVali);//castear sirve para convertir un tipo de dato a otro
 	CanionVali->setDispararBala(this);//se le asigna el estado al canion
 	CanionVali->GetActorLocation();//se obtiene la posicion del canion
-
+	UE_LOG(LogTemp, Warning, TEXT("Disparando Bala"));
 }
 
 void AStateDispararBala::activarDispararBala()
@@ -46,13 +46,16 @@ void AStateDispararBala::activarDispararBala()
 		UWorld* const World = GetWorld();
 		if (World != NULL)
 		{
-			FVector Location = GetActorLocation();
-			FRotator Rotation = GetActorRotation();
+			FVector Location = CanionVali->GetActorLocation()+FVector(0,0,200);
+			FRotator Rotation = CanionVali->GetActorRotation();
 			//lo que buscaba 
-			World->SpawnActor<AProyectilBala>(Location, Rotation);
+
+			World->SpawnActor<AProyectilBala>(Location + FVector(), Rotation);
 			NumberFired++;
 
+			UE_LOG(LogTemp, Warning, TEXT("Ubicacion de la bala %s"), *Location.ToString());
 			// Establecer el temporizador para el próximo disparo
+
 			FTimerHandle TimerHandle;
 			GetWorldTimerManager().SetTimer(TimerHandle, this, &AStateDispararBala::DesactivarDisparoBala, rand() % 6 + 1, false);
 

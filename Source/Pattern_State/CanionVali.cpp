@@ -20,6 +20,7 @@ ACanionVali::ACanionVali()
 	RootComponent = meshCanion;
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> CanonMesh(TEXT("StaticMesh'/Game/Meshes/Shield.Shield'"));
 	meshCanion->SetStaticMesh(CanonMesh.Object);
+	SetActorRotation(FRotator(0.0f, 180.0f, 0.0f));
 	SetActorRelativeScale3D(FVector(4.0f, 4.0f,4.0f));
 
 }
@@ -49,11 +50,14 @@ void ACanionVali::activarDispararHielo()
 {
 	StateActual->activarDispararHielo();
 
+	//UE_LOG(LogTemp, Warning, TEXT("Disparando Hielo del canonvali"));
+
 }
 
 void ACanionVali::activarDispararBala()
 {
-		StateActual->activarDispararBala();
+	StateActual->activarDispararBala();
+	UE_LOG(LogTemp, Warning, TEXT("Disparando Bala del canonvali"));
 }
 
 void ACanionVali::activarDispararLazer()
@@ -85,43 +89,47 @@ void ACanionVali::activarDesaparecerCanion()
 
 
 void ACanionVali::InicializarCanion(FString _State)
-
 {
 
 	if (_State.Equals("Dispararhielo")) {
+		//GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Blue, FString::Printf(TEXT("Se creo el estado DispararHielo")));
+
 		StateDispararHielo= GetWorld()->SpawnActor<AStateDispararHielo>(AStateDispararHielo::StaticClass());
 		StateDispararHielo->EstablecerCanion(this);
 		EstablecerState(StateDispararHielo);
 	}
-	if (_State.Equals("DispararBala")) {
+	else if (_State.Equals("DispararBala")) {
 		StateDispararBala = GetWorld()->SpawnActor<AStateDispararBala>(AStateDispararBala::StaticClass());
 		StateDispararBala->EstablecerCanion(this);
 		EstablecerState(StateDispararBala);
 	}
-	if (_State.Equals("DispararLazer")) {
+	else if (_State.Equals("DispararLazer")) {
 		StateDispararLazer = GetWorld()->SpawnActor<AStateDispararLazer>(AStateDispararLazer::StaticClass());
 		StateDispararLazer->EstablecerCanion(this);
 		EstablecerState(StateDispararLazer);
 	}
-	if (_State.Equals("DispararMisil")) {
+	else if (_State.Equals("DispararMisil")) {
 		StateDispararMisil = GetWorld()->SpawnActor<AStateDispararMisil>(AStateDispararMisil::StaticClass());
 		StateDispararMisil->EstablecerCanion(this);
 		EstablecerState(StateDispararMisil);
 	}
-	if (_State.Equals("CambiarPosicionCanion")) {
+	else if (_State.Equals("CambiarPosicionCanion")) {
 		StateCambiarPosicionCanion = GetWorld()->SpawnActor<AStateCambiarPosicionCanion>(AStateCambiarPosicionCanion::StaticClass());
 		StateCambiarPosicionCanion->EstablecerCanion(this);
 		EstablecerState(StateCambiarPosicionCanion);
 	}	
-	if (_State.Equals("VolverPosicionInicialCanion")) {
+	else if (_State.Equals("VolverPosicionInicialCanion")) {
 		StateVolverPosiconInicialCanion = GetWorld()->SpawnActor<AStateVolverPosicionIncialCanion>(AStateVolverPosicionIncialCanion::StaticClass());
 		StateVolverPosiconInicialCanion->EstablecerCanion(this);
 		EstablecerState(StateVolverPosiconInicialCanion);
 	}
-	if (_State.Equals("DesaparecerCanion")) {
+	else if (_State.Equals("DesaparecerCanion")) {
 		StateDesaparecerCanion = GetWorld()->SpawnActor<AStateDesaparecerCanion>(AStateDesaparecerCanion::StaticClass());
 		StateDesaparecerCanion->EstablecerCanion(this);
 		EstablecerState(StateDesaparecerCanion);
+	}
+	else {
+		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Blue, FString::Printf(TEXT("No se pudo crear el estado")));
 	}
 
 	//StateDispararHielo = GetWorld()->SpawnActor<AStateDispararHielo>(AStateDispararHielo::StaticClass());

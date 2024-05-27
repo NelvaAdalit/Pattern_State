@@ -58,7 +58,7 @@ AProyectilHielo::AProyectilHielo()
 	InitialLifeSpan = 5.f;
 
 	// Daño predeterminado del proyectil
-	DanioProvocado = 0.f;
+	DanioProvocado = 10.f;
 	//Configurando el proyectil para que genere eventos de colision
 	Projectil_Collision->SetCapsuleHalfHeight(160.0f);
 	Projectil_Collision->SetCapsuleRadius(160.0f);
@@ -82,7 +82,7 @@ void AProyectilHielo::Tick(float DeltaTime)
 
 void AProyectilHielo::Set_Danio(float Danio)
 {
-	Danio_D_B = Danio;
+	DanioProvocado = Danio;
 }
 
 void AProyectilHielo::NotifyActorBeginOverlap(AActor* OtherActor)
@@ -95,7 +95,7 @@ void AProyectilHielo::NotifyActorBeginOverlap(AActor* OtherActor)
 	if (Jugador)
 	{
 		DestroyPROYECTIL();
-		Jugador->Damage(Danio_D_B);
+		Jugador->Damage(DanioProvocado);
 	}
 }
 

@@ -56,8 +56,8 @@ void AStateDispararMisil::activarDispararMisil()
 		UWorld* const World = GetWorld();
 		if (World != NULL)
 		{
-			FVector Location = GetActorLocation();
-			FRotator Rotation = GetActorRotation();
+			FVector Location = CanionVali->GetActorLocation() + FVector(0, 0, 200);
+			FRotator Rotation = CanionVali->GetActorRotation();
 			World->SpawnActor<AProyectil>(Location, Rotation);
 			NumberFired++;
 

@@ -36,11 +36,14 @@ void AStateDispararHielo::EstablecerCanion(ACanionVali* _CanionVali)
 	CanionVali =Cast<ACanionVali>( _CanionVali);//castear sirve para convertir un tipo de dato a otro
 	CanionVali->setDispararHielo(this);//se le asigna el estado al canion
 	CanionVali->GetActorLocation();
-	
+	//UE_LOG(LogTemp, Warning, TEXT("Disparando Hielo"));
+
 }
 
 void AStateDispararHielo::activarDispararHielo()
 {
+	//UE_LOG(LogTemp, Warning, TEXT("Disparando Hielo del state disparar hielo"));
+
 	if (bCanFire && NumberFired < MaxProjectile) {
 		bCanFire = false;  // Prevenir nuevos disparos hasta que el temporizador expire
 
@@ -48,10 +51,14 @@ void AStateDispararHielo::activarDispararHielo()
 		UWorld* const World = GetWorld();
 		if (World != NULL)
 		{
-			FVector Location = GetActorLocation();
-			FRotator Rotation = GetActorRotation();
+			FVector Location = CanionVali->GetActorLocation() + FVector(0,0,200);
+
+			FRotator Rotation = CanionVali->GetActorRotation();
+
 			World->SpawnActor<AProyectilHielo>(Location, Rotation);
 			NumberFired++;
+
+			//UE_LOG(LogTemp, Warning, TEXT("Ubicacion de la bala %s"), *Location.ToString());
 
 			// Establecer el temporizador para el próximo disparo
 			FTimerHandle TimerHandle;

@@ -28,12 +28,12 @@ private:
 	
 	IIState* StateDispararHielo;
 	IIState* StateDispararBala;
-	IIState*  StateDispararLazer;
+	IIState* StateDispararLazer;
 	IIState* StateDispararMisil;
 	IIState* StateCambiarPosicionCanion;
 	IIState* StateVolverPosiconInicialCanion;
 	IIState* StateDesaparecerCanion;
-	IIState*StateActual;
+	IIState* StateActual;
 
 public:
 

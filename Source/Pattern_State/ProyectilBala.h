@@ -54,7 +54,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 public:
-	float Danio_D_B;
+	
 
 	//Danio del proyectil 
 

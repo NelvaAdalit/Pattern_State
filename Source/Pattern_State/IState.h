@@ -44,6 +44,8 @@ public:
 	virtual void DesactivarDesaparecerCanion()=0;
 	virtual FString ObtenerEstado() = 0;
 
+	int NumberFired;
+
 
 
 

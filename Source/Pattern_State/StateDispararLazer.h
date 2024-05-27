@@ -58,7 +58,6 @@ public:
 	uint32 bCanFire : 1;//entero de 32 bits
 	float FireRate;
 	int MaxProjectile;
-	int NumberFired;
 	int direccion = 1;
 	float velocidad = 8;
 	FTimerHandle TimerHandle_ShotTimerExpired;
