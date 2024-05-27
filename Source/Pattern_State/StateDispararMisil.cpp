@@ -16,11 +16,11 @@ AStateDispararMisil::AStateDispararMisil()
 	//meshCanion->SetStaticMesh(CanonMesh.Object);
 	//RootComponent = meshCanion;
 
-	MaxProjectile = 4;
+	MaxProjectile = 2;
 	NumberFired = 0;
 	bCanFire = true;
 
-	SetActorRelativeScale3D(FVector(2.0f, 2.0f, 2.0f));
+//SetActorRelativeScale3D(FVector(2.0f, 2.0f, 2.0f));
 
 }
 
@@ -56,7 +56,7 @@ void AStateDispararMisil::activarDispararMisil()
 		UWorld* const World = GetWorld();
 		if (World != NULL)
 		{
-			FVector Location = CanionVali->GetActorLocation() + FVector(0, 0, 200);
+			FVector Location = CanionVali->GetActorLocation() + FVector(0, 0, 300);
 			FRotator Rotation = CanionVali->GetActorRotation();
 			World->SpawnActor<AProyectil>(Location, Rotation);
 			NumberFired++;

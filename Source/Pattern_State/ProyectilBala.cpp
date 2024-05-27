@@ -23,12 +23,13 @@ AProyectilBala::AProyectilBala()
 	Projectil_Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Projectil_Mesh"));
 	RootComponent = Projectil_Mesh;
 
-	static ConstructorHelpers::FObjectFinder<UStaticMesh>MeshAsset(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Sphere.Shape_Sphere'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh>MeshAsset(TEXT("StaticMesh'/Game/Meshes/BulletEnemyLevel1.BulletEnemyLevel1'"));
 	if (MeshAsset.Succeeded())
 	{
 		Projectil_Mesh->SetStaticMesh(MeshAsset.Object);
 
 	}
+	//SetActorRelativeScale3D(FVector(2.0f, 2.0f, 2.0f));
 	// Inicializar el sistema de partículas para la explosión
 	static ConstructorHelpers::FObjectFinder<UParticleSystem> ParticleAsset(TEXT("ParticleSystem'/Game/StarterContent/Particles/P_Explosion.P_Explosion'"));
 	if (ParticleAsset.Succeeded())
@@ -63,7 +64,8 @@ AProyectilBala::AProyectilBala()
 	//Configurando el proyectil para que genere eventos de colision
 	Projectil_Collision->SetCapsuleHalfHeight(160.0f);
 	Projectil_Collision->SetCapsuleRadius(160.0f);
-
+	OscillationFrequency = 5.0f;
+	OscillationAmplitude = 100.0f;
 
 }
 
@@ -71,13 +73,20 @@ AProyectilBala::AProyectilBala()
 void AProyectilBala::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	//InitialLocation = GetActorLocation();
 }
 
 // Called every frame
 void AProyectilBala::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	// Calcular el nuevo desplazamiento oscilatorio
+	/*FVector NewLocation = InitialLocation;
+	float Time = GetWorld()->GetTimeSeconds();
+	NewLocation.X += OscillationAmplitude * FMath::Sin(OscillationFrequency * Time);*/
+
+	// Establecer la nueva posición del proyectil
+	//SetActorLocation(NewLocation);
 
 }
 

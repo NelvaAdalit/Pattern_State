@@ -22,7 +22,7 @@ AProyectilLazer::AProyectilLazer()
 	Projectil_Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Projectil_Mesh"));
 	RootComponent = Projectil_Mesh;
 
-	static ConstructorHelpers::FObjectFinder<UStaticMesh>MeshAsset(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Sphere.Shape_Sphere'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh>MeshAsset(TEXT("StaticMesh'/Game/Meshes/BulletEnemyLevel2.BulletEnemyLevel2'"));
 	if (MeshAsset.Succeeded())
 	{
 		Projectil_Mesh->SetStaticMesh(MeshAsset.Object);
@@ -34,7 +34,7 @@ AProyectilLazer::AProyectilLazer()
 	{
 		Explosion_Particles = ParticleAsset.Object;
 	}
-
+	//SetActorRelativeScale3D(FVector(2.0f, 2.0f, 2.0f));
 	// Inicializar el sonido de la colisión
 	static ConstructorHelpers::FObjectFinder<USoundBase> SoundAsset(TEXT("SoundWave'/Game/StarterContent/Audio/Explosion01.Explosion01'"));
 	if (SoundAsset.Succeeded())

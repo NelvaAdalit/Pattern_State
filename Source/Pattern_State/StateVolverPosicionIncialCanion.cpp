@@ -47,5 +47,6 @@ FString AStateVolverPosicionIncialCanion::ObtenerEstado()
 
 void AStateVolverPosicionIncialCanion::DesactivarVolverPosiconInicialCanion()
 {
+
 }
 

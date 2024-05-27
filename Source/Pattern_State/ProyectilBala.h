@@ -54,7 +54,9 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 public:
-	
+	int OscillationFrequency ;
+	int OscillationAmplitude ;
+	FVector InitialLocation;
 
 	//Danio del proyectil 
 

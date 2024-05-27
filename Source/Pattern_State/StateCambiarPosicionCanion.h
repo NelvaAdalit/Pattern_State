@@ -51,4 +51,9 @@ private:
 	virtual void DesactivarDisparoMisil() override {};
 	virtual void DesactivarVolverPosiconInicialCanion() override {};
 	virtual void DesactivarDesaparecerCanion() override {};
+public:
+	float TimeElapsed;
+	float Radius;
+	float Speed;
+	FVector InitialLocation;
 };

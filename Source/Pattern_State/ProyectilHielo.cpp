@@ -22,12 +22,13 @@ AProyectilHielo::AProyectilHielo()
 	Projectil_Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Projectil_Mesh"));
 	RootComponent = Projectil_Mesh;
 
-	static ConstructorHelpers::FObjectFinder<UStaticMesh>MeshAsset(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Sphere.Shape_Sphere'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh>MeshAsset(TEXT("StaticMesh'/Game/Meshes/BulletLevel1.BulletLevel1'"));
 	if (MeshAsset.Succeeded())
 	{
 		Projectil_Mesh->SetStaticMesh(MeshAsset.Object);
 
 	}
+	//SetActorRelativeScale3D(FVector(1.0f, 1.0f, 1.0f));
 	// Inicializar el sistema de partículas para la explosión
 	static ConstructorHelpers::FObjectFinder<UParticleSystem> ParticleAsset(TEXT("ParticleSystem'/Game/StarterContent/Particles/P_Explosion.P_Explosion'"));
 	if (ParticleAsset.Succeeded())

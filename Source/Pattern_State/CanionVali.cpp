@@ -132,21 +132,6 @@ void ACanionVali::InicializarCanion(FString _State)
 		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Blue, FString::Printf(TEXT("No se pudo crear el estado")));
 	}
 
-	//StateDispararHielo = GetWorld()->SpawnActor<AStateDispararHielo>(AStateDispararHielo::StaticClass());
-    //   StateDispararHielo->EstablecerCanion(this);
-	//StateDispararBala = GetWorld()->SpawnActor<AStateDispararBala>(AStateDispararBala::StaticClass());
-	//StateDispararBala->EstablecerCanion(this);
-	//StateDispararLazer = GetWorld()->SpawnActor<AStateDispararLazer>(AStateDispararLazer::StaticClass());
-	//StateDispararLazer->EstablecerCanion(this);
-	//StateDispararMisil = GetWorld()->SpawnActor<AStateDispararMisil>(AStateDispararMisil::StaticClass());
-	//StateDispararMisil->EstablecerCanion(this);
-	//StateCambiarPosicionCanion = GetWorld()->SpawnActor<AStateCambiarPosicionCanion>(AStateCambiarPosicionCanion::StaticClass());
-	//StateCambiarPosicionCanion->EstablecerCanion(this);
-	//StateVolverPosiconInicialCanion = GetWorld()->SpawnActor<AStateVolverPosicionIncialCanion>(AStateVolverPosicionIncialCanion::StaticClass());
-	//StateVolverPosiconInicialCanion->EstablecerCanion(this);
-	
-
-
 }
 
 void ACanionVali::DesactivarDisparoHielo()

@@ -53,6 +53,7 @@ private:
 
 
 public:
+
 	int dureza;
 	int cantidadProyectiles;
 	uint32 bCanFire : 1;//entero de 32 bits
