@@ -57,6 +57,7 @@ public:
 	void setVolverPosiconInicialCanion(IIState* _StateVolverPosiconInicialCanion) { StateVolverPosiconInicialCanion = _StateVolverPosiconInicialCanion; }
 	void setDesaparecerCanion(IIState* _StateDesaparecerCanion) { StateDesaparecerCanion = _StateDesaparecerCanion; }
 
+
 	void activarDispararHielo();
 	void activarDispararBala();
 	void activarDispararLazer();
@@ -74,7 +75,16 @@ public:
 	void DesactivarVolverPosiconInicialCanion();
 	void DesactivarDesaparecerCanion();
 
-
+	FORCEINLINE IIState* C_ObtenerEstado();
+	FORCEINLINE IIState* C_ObtenerStateDispararHielo();
+	FORCEINLINE IIState* C_ObtenerStateDispararBala();
+	FORCEINLINE IIState* C_ObtenerStateDispararLazer();
+	FORCEINLINE IIState* C_ObtenerStateDispararMisil();
+	FORCEINLINE IIState* C_ObtenerStateCambiarPosicionCanion();
+	FORCEINLINE IIState* C_ObtenerStateVolverPosiconInicialCanion();
+	FORCEINLINE IIState* C_ObtenerStateDesaparecerCanion();
+	FORCEINLINE FString C_ObtenerEstadoActual();
+	
 
 
 

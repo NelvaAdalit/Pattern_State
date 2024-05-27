@@ -16,13 +16,14 @@ void APattern_StateGameMode::BeginPlay()
     FVector PosicionInicialCanion = FVector(500.0f, 100.0f, 270.0f);
     FVector PosicionNaveActual= FVector(PosicionInicialCanion.X, PosicionInicialCanion.Y , PosicionInicialCanion.Z);
     CanionVali =Cast<ACanionVali> (GetWorld()->SpawnActor<ACanionVali>(PosicionNaveActual, rotacionCanion));
-   /* CanionVali->getDispararHielo();
-    CanionVali->getDispararBala();
-    CanionVali->getDispararLazer();
-    CanionVali->getDispararMisil();
-    CanionVali->getCambiarPosicionCanion();
-    CanionVali->getVolverPosiconInicialCanion();
-    CanionVali->getDesaparecerCanion();*/
+
+    /*CanionVali->activarDispararHielo();
+    CanionVali->activarDispararBala();
+    CanionVali->activarDispararLazer();
+    CanionVali->activarDispararMisil();
+    CanionVali->activarCambiarPosicionCanion();
+    CanionVali->activarVolverPosiconInicialCanion();
+    CanionVali->activarDesaparecerCanion();*/
 
 
    

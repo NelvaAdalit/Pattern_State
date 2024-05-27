@@ -58,7 +58,10 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(APattern_StateGameMode)
 
 
-#define Pattern_State_Source_Pattern_State_Pattern_StateGameMode_h_12_PRIVATE_PROPERTY_OFFSET
+#define Pattern_State_Source_Pattern_State_Pattern_StateGameMode_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__CanionVali() { return STRUCT_OFFSET(APattern_StateGameMode, CanionVali); }
+
+
 #define Pattern_State_Source_Pattern_State_Pattern_StateGameMode_h_9_PROLOG
 #define Pattern_State_Source_Pattern_State_Pattern_StateGameMode_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

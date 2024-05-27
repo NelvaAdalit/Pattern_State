@@ -40,6 +40,7 @@ void ACanionVali::Tick(float DeltaTime)
 
 void ACanionVali::EstablecerState(IIState* _State)
 {
+
 		StateActual = _State;
 
 }
@@ -47,6 +48,7 @@ void ACanionVali::EstablecerState(IIState* _State)
 void ACanionVali::activarDispararHielo()
 {
 	StateActual->activarDispararHielo();
+
 }
 
 void ACanionVali::activarDispararBala()
@@ -85,6 +87,7 @@ void ACanionVali::activarDesaparecerCanion()
 void ACanionVali::InicializarCanion(FString _State)
 
 {
+
 	if (_State.Equals("Dispararhielo")) {
 		StateDispararHielo= GetWorld()->SpawnActor<AStateDispararHielo>(AStateDispararHielo::StaticClass());
 		StateDispararHielo->EstablecerCanion(this);
@@ -122,7 +125,7 @@ void ACanionVali::InicializarCanion(FString _State)
 	}
 
 	//StateDispararHielo = GetWorld()->SpawnActor<AStateDispararHielo>(AStateDispararHielo::StaticClass());
- //   StateDispararHielo->EstablecerCanion(this);
+    //   StateDispararHielo->EstablecerCanion(this);
 	//StateDispararBala = GetWorld()->SpawnActor<AStateDispararBala>(AStateDispararBala::StaticClass());
 	//StateDispararBala->EstablecerCanion(this);
 	//StateDispararLazer = GetWorld()->SpawnActor<AStateDispararLazer>(AStateDispararLazer::StaticClass());
@@ -171,3 +174,56 @@ void ACanionVali::DesactivarDesaparecerCanion()
 {
 	StateActual->DesactivarDesaparecerCanion();
 }
+
+IIState* ACanionVali::C_ObtenerEstado()
+{
+	return StateActual;
+}
+
+IIState* ACanionVali::C_ObtenerStateDispararHielo()
+{
+	return StateDispararHielo; 
+
+}
+
+IIState* ACanionVali::C_ObtenerStateDispararBala()
+{
+	return StateDispararBala;
+}
+
+IIState* ACanionVali::C_ObtenerStateDispararLazer()
+{
+	return StateDispararLazer;
+}
+
+IIState* ACanionVali::C_ObtenerStateDispararMisil()
+{
+	return StateDispararMisil;
+}
+
+IIState* ACanionVali::C_ObtenerStateCambiarPosicionCanion()
+{
+	return StateCambiarPosicionCanion;
+}
+
+IIState* ACanionVali::C_ObtenerStateVolverPosiconInicialCanion()
+{
+	return StateVolverPosiconInicialCanion;
+}
+
+IIState* ACanionVali::C_ObtenerStateDesaparecerCanion()
+{
+	return StateDesaparecerCanion;
+}
+
+FString ACanionVali::C_ObtenerEstadoActual()
+{
+	if (StateActual) {
+		return "El estado actual del canion es: " +StateActual->ObtenerEstado();
+	}
+	else {
+		return "No hay estado actual";
+	
+	}
+}
+

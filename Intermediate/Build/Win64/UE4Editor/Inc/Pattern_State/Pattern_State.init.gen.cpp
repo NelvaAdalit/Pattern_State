@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodePattern_State_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x19B48B92,
+				0x6097480E,
 				0x11EE2924,
 				METADATA_PARAMS(nullptr, 0)
 			};

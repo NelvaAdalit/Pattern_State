@@ -42,9 +42,6 @@ public:
 	virtual void DesactivarCambiarPosicionCanion()=0;
 	virtual void DesactivarVolverPosiconInicialCanion()=0;
 	virtual void DesactivarDesaparecerCanion()=0;
-
-
-
 	virtual FString ObtenerEstado() = 0;
 
 
