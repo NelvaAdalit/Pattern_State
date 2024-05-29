@@ -21,17 +21,7 @@ protected:
 	UPROPERTY(VisibleAnywhere, Category = "Game Mode")
 	class ACanionVali* CanionVali;
 
-	FTimerHandle ManejoTiempoCambio;
-	int tiempoCambio;
 
-	void CambioDeEstado();
-
-	float tiempoCambioEstado1;
-	float tiempoCambioEstado2;
-	float tiempoCambioEstado3;
-	float tiempoCambioEstado4;
-
-	int contador;
 
 };
 

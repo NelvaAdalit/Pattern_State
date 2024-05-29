@@ -10,7 +10,7 @@ AStateDispararHielo::AStateDispararHielo()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	MaxProjectile = 2;
+	MaxProjectile = 1;
 	NumberFired = 0;
 	bCanFire = true;
 

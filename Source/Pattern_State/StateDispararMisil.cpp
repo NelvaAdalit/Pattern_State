@@ -16,7 +16,7 @@ AStateDispararMisil::AStateDispararMisil()
 	//meshCanion->SetStaticMesh(CanonMesh.Object);
 	//RootComponent = meshCanion;
 
-	MaxProjectile = 2;
+	MaxProjectile = 1;
 	NumberFired = 0;
 	bCanFire = true;
 

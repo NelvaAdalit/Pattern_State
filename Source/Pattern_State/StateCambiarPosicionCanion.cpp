@@ -19,7 +19,7 @@ AStateCambiarPosicionCanion::AStateCambiarPosicionCanion()
 void AStateCambiarPosicionCanion::BeginPlay()
 {
 	Super::BeginPlay();
-	InitialLocation = CanionVali->GetActorLocation();
+	//InitialLocation = CanionVali->GetActorLocation();
 }
 
 // Called every frame

@@ -34,7 +34,7 @@ AProyectilLazer::AProyectilLazer()
 	{
 		Explosion_Particles = ParticleAsset.Object;
 	}
-	//SetActorRelativeScale3D(FVector(2.0f, 2.0f, 2.0f));
+	SetActorRelativeScale3D(FVector(2.0f, 2.0f, 2.0f));
 	// Inicializar el sonido de la colisión
 	static ConstructorHelpers::FObjectFinder<USoundBase> SoundAsset(TEXT("SoundWave'/Game/StarterContent/Audio/Explosion01.Explosion01'"));
 	if (SoundAsset.Succeeded())

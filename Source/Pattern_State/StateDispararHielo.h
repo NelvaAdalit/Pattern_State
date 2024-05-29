@@ -36,7 +36,11 @@ public:
 
 	void DesactivarDisparoHielo() override ;
 
+
+
+
 private:
+	//cambiar protecteed
 	virtual void activarDispararBala() override {};
 	virtual void activarDispararLazer() override {};
 	virtual void activarDispararMisil() override {};

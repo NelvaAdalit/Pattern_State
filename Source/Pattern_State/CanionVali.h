@@ -35,6 +35,7 @@ private:
 	IIState* StateDesaparecerCanion;
 	IIState* StateActual;
 
+
 public:
 
 	IIState* getState() { return StateActual; }
@@ -88,5 +89,14 @@ public:
 
 
 
+public:
 
+	FTimerHandle ManejoTiempoCambio;
+	int tiempoCambio;
+
+	void CambioDeEstado();
+	void ReIniciarCambioDeEstado();
+	int VolveraEmpezar;
+
+	int contador;
 };
