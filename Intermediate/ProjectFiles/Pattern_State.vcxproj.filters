@@ -97,18 +97,6 @@
     <ClInclude Include="..\..\Source\Pattern_State\ProyectilLazer.h">
       <Filter>Source\Pattern_State</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Pattern_State\StateCambiarPosicionCanion.cpp">
-      <Filter>Source\Pattern_State</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Pattern_State\StateCambiarPosicionCanion.h">
-      <Filter>Source\Pattern_State</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\Pattern_State\StateDesaparecerCanion.cpp">
-      <Filter>Source\Pattern_State</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Pattern_State\StateDesaparecerCanion.h">
-      <Filter>Source\Pattern_State</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\Pattern_State\StateDispararBala.cpp">
       <Filter>Source\Pattern_State</Filter>
     </ClCompile>
@@ -131,12 +119,6 @@
       <Filter>Source\Pattern_State</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Pattern_State\StateDispararMisil.h">
-      <Filter>Source\Pattern_State</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\Pattern_State\StateVolverPosicionIncialCanion.cpp">
-      <Filter>Source\Pattern_State</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Pattern_State\StateVolverPosicionIncialCanion.h">
       <Filter>Source\Pattern_State</Filter>
     </ClInclude>
   </ItemGroup>

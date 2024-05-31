@@ -12,7 +12,7 @@ AStateDispararLazer::AStateDispararLazer()
 	PrimaryActorTick.bCanEverTick = true;
 
 	MaxProjectile = 1;
-	NumberFired = 0;
+	/*NumberFired = 0;*/
 	bCanFire = true;
 }
 
@@ -39,46 +39,12 @@ void AStateDispararLazer::EstablecerCanion(ACanionVali* _CanionVali)
 }
 
 
-void AStateDispararLazer::activarDispararLazer()
+void AStateDispararLazer::EstadoDispararLazer()
 {
-	if (bCanFire && NumberFired < MaxProjectile) {
-		bCanFire = false;  // Prevenir nuevos disparos hasta que el temporizador expire
-
-		// creador de proycetiles
-		UWorld* const World = GetWorld();
-		if (World != NULL)
-		{
-			FVector Location = CanionVali->GetActorLocation() + FVector(0, 0, 240);
-			FRotator Rotation = CanionVali->GetActorRotation();
-			World->SpawnActor<AProyectilLazer>(Location, Rotation);
-			NumberFired++;
-
-			// Establecer el temporizador para el próximo disparo
-			FTimerHandle TimerHandle;
-			GetWorldTimerManager().SetTimer(TimerHandle, this, &AStateDispararLazer::DesactivarDisparoLazer, rand() % 6 + 1, false);
-
-
-
-
-
-
-		}
-	}
+	CanionVali = Cast<ACanionVali>(StaticClass());
+	CanionVali -> activarDispararLazer();
 }
 
-void AStateDispararLazer::DesactivarDisparoLazer()
-{
-	if (NumberFired < MaxProjectile)
-	{
-		bCanFire = true;  
-		activarDispararLazer(); 
-	}
-	else
-	{
-		NumberFired = 0;  
-		bCanFire = false;
-	}
-}
 
 
 FString AStateDispararLazer::ObtenerEstado()

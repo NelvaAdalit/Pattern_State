@@ -11,7 +11,7 @@ AStateDispararBala::AStateDispararBala()
 	PrimaryActorTick.bCanEverTick = true;
 
 	MaxProjectile = 1;
-	NumberFired = 0;
+	/*NumberFired = 0;*/
 	bCanFire = true;
 }
 
@@ -35,53 +35,16 @@ void AStateDispararBala::EstablecerCanion(ACanionVali* _CanionVali)
 	CanionVali->setDispararBala(this);//se le asigna el estado al canion
 	CanionVali->GetActorLocation();//se obtiene la posicion del canion
 	UE_LOG(LogTemp, Warning, TEXT("Disparando Bala"));
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Disparando Bala"));
 }
 
-void AStateDispararBala::activarDispararBala()
+void AStateDispararBala::EstadoDispararBala()
 {
-	if (bCanFire && NumberFired < MaxProjectile) {
-		bCanFire = false;  // Prevenir nuevos disparos hasta que el temporizador expire
-
-		// creador de proycetiles
-		UWorld* const World = GetWorld();
-		if (World != NULL)
-		{
-			FVector Location = CanionVali->GetActorLocation() + FVector(0, 0, 190);
-			FRotator Rotation = CanionVali->GetActorRotation();
-			//lo que buscaba 
-
-			World->SpawnActor<AProyectilBala>(Location + FVector(), Rotation);
-			NumberFired++;
-
-			UE_LOG(LogTemp, Warning, TEXT("Ubicacion de la bala %s"), *Location.ToString());
-			// Establecer el temporizador para el próximo disparo
-
-			FTimerHandle TimerHandle;
-			GetWorldTimerManager().SetTimer(TimerHandle, this, &AStateDispararBala::DesactivarDisparoBala, rand() % 6 + 1, false);
-
-
-
-
-
-
-		}
-	}
+	CanionVali = Cast<ACanionVali>(StaticClass());
+	CanionVali->activarDispararBala();
+	
 }
 
-void AStateDispararBala::DesactivarDisparoBala()
-{
-	if (NumberFired < MaxProjectile)
-	{
-		bCanFire = true;
-		activarDispararBala();
-	}
-	else
-	{
-		NumberFired = 0;
-		bCanFire = false;
-	}
-
-}
 
 FString AStateDispararBala::ObtenerEstado()
 {

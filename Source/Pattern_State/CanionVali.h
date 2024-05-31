@@ -26,13 +26,10 @@ public:
 	virtual void Tick(float DeltaTime) override;
 private:
 	
-	IIState* StateDispararHielo;
-	IIState* StateDispararBala;
-	IIState* StateDispararLazer;
-	IIState* StateDispararMisil;
-	IIState* StateCambiarPosicionCanion;
-	IIState* StateVolverPosiconInicialCanion;
-	IIState* StateDesaparecerCanion;
+	class AStateDispararHielo* StateDispararHielo;
+	class AStateDispararBala* StateDispararBala;
+	class AStateDispararLazer* StateDispararLazer;
+	class AStateDispararMisil* StateDispararMisil;
 	IIState* StateActual;
 
 
@@ -41,49 +38,37 @@ public:
 	IIState* getState() { return StateActual; }
 	FORCEINLINE void EstablecerState(IIState* _State);//SET
 	
-	IIState*getDispararHielo() { return StateDispararHielo; }
-	IIState*getDispararBala() { return StateDispararBala; }
-	IIState*getDispararLazer() { return StateDispararLazer; }
-	IIState*getDispararMisil() { return StateDispararMisil; }
+	class AStateDispararHielo* getDispararHielo() { return StateDispararHielo; }
+	class AStateDispararBala* getDispararBala() { return StateDispararBala; }
+	class AStateDispararLazer* getDispararLazer() { return StateDispararLazer; }
+	class AStateDispararMisil* getDispararMisil() { return StateDispararMisil; }
 
-	IIState*getCambiarPosicionCanion() { return StateCambiarPosicionCanion; }					
-	IIState*getVolverPosiconInicialCanion() { return StateVolverPosiconInicialCanion; }
-	IIState*getDesaparecerCanion() { return StateDesaparecerCanion; }
 
-	void setDispararHielo(IIState* _StateDispararHielo) { StateDispararHielo = _StateDispararHielo; }
-	void setDispararBala(IIState* _StateDispararBala) { StateDispararBala = _StateDispararBala; }
-	void setDispararLazer(IIState* _StateDispararLazer) { StateDispararLazer = _StateDispararLazer; }
-	void setDispararMisil(IIState* _StateDispararMisil) { StateDispararMisil = _StateDispararMisil; }
-	void setCambiarPosicionCanion(IIState* _StateCambiarPosicionCanion) { StateCambiarPosicionCanion = _StateCambiarPosicionCanion; }
-	void setVolverPosiconInicialCanion(IIState* _StateVolverPosiconInicialCanion) { StateVolverPosiconInicialCanion = _StateVolverPosiconInicialCanion; }
-	void setDesaparecerCanion(IIState* _StateDesaparecerCanion) { StateDesaparecerCanion = _StateDesaparecerCanion; }
+
+	void setDispararHielo(class AStateDispararHielo* _StateDispararHielo) { StateDispararHielo = _StateDispararHielo; }
+	void setDispararBala(class AStateDispararBala* _StateDispararBala) { StateDispararBala = _StateDispararBala; }
+	void setDispararLazer(class AStateDispararLazer* _StateDispararLazer) { StateDispararLazer = _StateDispararLazer; }
+	void setDispararMisil(class AStateDispararMisil* _StateDispararMisil) { StateDispararMisil = _StateDispararMisil; }
+
 
 
 	void activarDispararHielo();
 	void activarDispararBala();
 	void activarDispararLazer();
 	void activarDispararMisil();
-	void activarCambiarPosicionCanion();
-	void activarVolverPosiconInicialCanion();
-	void activarDesaparecerCanion();
    void InicializarCanion(FString _State) ;
 
 	void DesactivarDisparoHielo();
 	void DesactivarDisparoBala();
 	void DesactivarDisparoLazer();
 	void DesactivarDisparoMisil();
-	void DesactivarCambiarPosicionCanion();
-	void DesactivarVolverPosiconInicialCanion();
-	void DesactivarDesaparecerCanion();
+
 
 	FORCEINLINE IIState* C_ObtenerEstado();
 	FORCEINLINE IIState* C_ObtenerStateDispararHielo();
 	FORCEINLINE IIState* C_ObtenerStateDispararBala();
 	FORCEINLINE IIState* C_ObtenerStateDispararLazer();
 	FORCEINLINE IIState* C_ObtenerStateDispararMisil();
-	FORCEINLINE IIState* C_ObtenerStateCambiarPosicionCanion();
-	FORCEINLINE IIState* C_ObtenerStateVolverPosiconInicialCanion();
-	FORCEINLINE IIState* C_ObtenerStateDesaparecerCanion();
 	FORCEINLINE FString C_ObtenerEstadoActual();
 	
 
@@ -95,8 +80,14 @@ public:
 	int tiempoCambio;
 
 	void CambioDeEstado();
-	void ReIniciarCambioDeEstado();
-	int VolveraEmpezar;
 
 	int contador;
+public:
+	int cantidadProyectiles;
+	uint32 bCanFire : 1;//entero de 32 bits
+	float FireRate;
+	int MaxProjectile;
+	float velocidad = 8;
+	int NumberFired;
+	FTimerHandle TimerHandle_ShotTimerExpired;
 };
