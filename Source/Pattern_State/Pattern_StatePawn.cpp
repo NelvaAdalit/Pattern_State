@@ -164,7 +164,7 @@ void APattern_StatePawn::Componentes_Colision()
 	//Efecto de Explosion 
 	if (ShipExplosion)
 		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ShipExplosion, GetActorTransform());
-	//Sonido de la explosion
+	
 
 	if (ExplosionSoundShip != nullptr)
 		UGameplayStatics::PlaySoundAtLocation(this, ExplosionSoundShip, GetActorLocation());

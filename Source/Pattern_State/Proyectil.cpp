@@ -13,7 +13,6 @@
 #include "Sound/SoundBase.h"
 #include "Pattern_StatePawn.h"
 
-
 AProyectil::AProyectil()
 {
 	PrimaryActorTick.bCanEverTick = true;
