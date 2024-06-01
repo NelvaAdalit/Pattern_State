@@ -14,6 +14,8 @@
 #include "Components/CapsuleComponent.h"
 #include "Particles/ParticleSystem.h"
 #include "Sound/SoundBase.h"
+#include "IStrategy.h"
+#include "Engine/World.h"
 
 
 
@@ -76,7 +78,7 @@ void APattern_StatePawn::Tick(float DeltaSeconds)
 		Componentes_Colision();
 	
 	}
-	GEngine->AddOnScreenDebugMessage(-1,0.f,FColor::Cyan,FString::Printf(TEXT("Vida:%f"),LifePawn));
+//	GEngine->AddOnScreenDebugMessage(-1,0.f,FColor::Cyan,FString::Printf(TEXT("Vida:%f"),LifePawn));
 
 
 
@@ -159,6 +161,7 @@ void APattern_StatePawn::Damage(float Damage)
 
 }
 
+
 void APattern_StatePawn::Componentes_Colision()
 {
 	//Efecto de Explosion 
@@ -170,5 +173,20 @@ void APattern_StatePawn::Componentes_Colision()
 		UGameplayStatics::PlaySoundAtLocation(this, ExplosionSoundShip, GetActorLocation());
 
 	this->Destroy();
+}
+
+
+void APattern_StatePawn::CambiarEstrategia(AActor* _EstrategiaElegida)
+{
+	Estrategia = Cast<IIStrategy>(_EstrategiaElegida);
+
+}
+
+void APattern_StatePawn::EjecutarEstrategia()
+{
+	if (Estrategia)
+	{
+		Estrategia->EjecutarE();
+	}
 }
 

@@ -2,11 +2,14 @@
 
 #include "Pattern_StateGameMode.h"
 #include "CanionVali.h"
+#include "Pattern_StatePawn.h"
+#include "StrategyFastFurious.h"
+#include "StrategyDefensivaExtrema.h"
 
 APattern_StateGameMode::APattern_StateGameMode()
 {
     PrimaryActorTick.bCanEverTick = true;
-   
+    TiempoDeJuego = 0;
 }
 
 void APattern_StateGameMode::BeginPlay()
@@ -26,6 +29,11 @@ void APattern_StateGameMode::BeginPlay()
 
 
 
+   PawnJugador = GetWorld()->SpawnActor<APattern_StatePawn>(APattern_StatePawn::StaticClass());
+    FastFurious=GetWorld()->SpawnActor<AStrategyFastFurious>(AStrategyFastFurious::StaticClass());
+
+    _DefensivaExtrema=GetWorld()->SpawnActor<AStrategyDefensivaExtrema>(AStrategyDefensivaExtrema::StaticClass());
+
 
 
 }
@@ -35,9 +43,20 @@ void APattern_StateGameMode::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
 
+    TiempoDeJuego += DeltaTime;
+    if (TiempoDeJuego >=5.0f)
+    {
+        PawnJugador->CambiarEstrategia(FastFurious);
+        PawnJugador->EjecutarEstrategia();
     
+    }
+    if (TiempoDeJuego >= 10.0f)
+    {
+        PawnJugador->CambiarEstrategia(_DefensivaExtrema);
+        PawnJugador->EjecutarEstrategia();
+    }
+    if (TiempoDeJuego >= 15.0f) {
+        TiempoDeJuego = 0;
+    }
 
 }
-
-
-

@@ -84,12 +84,33 @@ public:
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 public:
-
-	float LifePawn;
 	void Damage(float Damage);
 	void Componentes_Colision();
-	float GetHelth() const { return LifePawn; }		
+
+	float LifePawn;
+
+	float GetHelth() const { 
+		
+		
+		return LifePawn; 
+	}		
 	
+
+
+private:
+	//Puntero a la interfaz estrategia
+
+
+
+	//PatternStrategy
+	class IIStrategy* Estrategia;
+	class AStrategyFastFurious* FastFurious;
+	class AEstrategyDefensivaExtrema* _EstrategiaDefensivaExtrema;
+
+public:
+
+	void CambiarEstrategia(AActor* _EstrategiaElegida);
+	void EjecutarEstrategia();
 
 };
 

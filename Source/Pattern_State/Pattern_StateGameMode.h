@@ -19,9 +19,14 @@ public:
 	virtual void Tick(float DeltaTime) override;
 protected:
 	UPROPERTY(VisibleAnywhere, Category = "Game Mode")
+
 	class ACanionVali* CanionVali;
 
+	class APattern_StatePawn* PawnJugador;
+	class AStrategyFastFurious* FastFurious;
+	class AStrategyDefensivaExtrema*_DefensivaExtrema;
 
+	float TiempoDeJuego;
 
 };
 

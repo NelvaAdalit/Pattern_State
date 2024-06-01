@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Pattern_State.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{1926EC4A-99BC-4B98-9525-25F30A51434B}</UniqueIdentifier>
+      <UniqueIdentifier>{15E51A33-2736-4D4D-ADDA-8E945BED057A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Pattern_State.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{840002FF-6C25-46F3-9802-05A599C6F5C1}</UniqueIdentifier>
+      <UniqueIdentifier>{2458FDD4-F67F-402B-BD66-34D503512592}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Pattern_State">
-      <UniqueIdentifier>{A22236AC-FCB1-4B2D-B730-9E74273AD6C1}</UniqueIdentifier>
+      <UniqueIdentifier>{DA1EA2ED-E7B4-48E0-81D9-B37BDCDA7CA9}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Pattern_State\CanionVali.cpp">
       <Filter>Source\Pattern_State</Filter>
@@ -44,6 +44,12 @@
       <Filter>Source\Pattern_State</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Pattern_State\IState.h">
+      <Filter>Source\Pattern_State</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Pattern_State\IStrategy.cpp">
+      <Filter>Source\Pattern_State</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Pattern_State\IStrategy.h">
       <Filter>Source\Pattern_State</Filter>
     </ClInclude>
     <None Include="..\..\Source\Pattern_State\Pattern_State.Build.cs">
@@ -119,6 +125,18 @@
       <Filter>Source\Pattern_State</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Pattern_State\StateDispararMisil.h">
+      <Filter>Source\Pattern_State</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Pattern_State\StrategyDefensivaExtrema.cpp">
+      <Filter>Source\Pattern_State</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Pattern_State\StrategyDefensivaExtrema.h">
+      <Filter>Source\Pattern_State</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Pattern_State\StrategyFastFurious.cpp">
+      <Filter>Source\Pattern_State</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Pattern_State\StrategyFastFurious.h">
       <Filter>Source\Pattern_State</Filter>
     </ClInclude>
   </ItemGroup>

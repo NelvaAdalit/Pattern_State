@@ -35,6 +35,7 @@
 /FUNCTIONPADMIN
 "D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\Pattern_StateEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
 "D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\CanionVali.cpp.obj"
+"D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\IEstrategias.cpp.obj"
 "D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\IState.cpp.obj"
 "D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\Pattern_State.cpp.obj"
 "D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\Pattern_StateGameMode.cpp.obj"
@@ -49,6 +50,7 @@
 "D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\StateDispararLazer.cpp.obj"
 "D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\StateDispararMisil.cpp.obj"
 "D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\CanionVali.gen.cpp.obj"
+"D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\IEstrategias.gen.cpp.obj"
 "D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\IState.gen.cpp.obj"
 "D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\Pattern_State.init.gen.cpp.obj"
 "D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\Pattern_StateGameMode.gen.cpp.obj"

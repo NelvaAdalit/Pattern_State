@@ -24,19 +24,13 @@ ACanionVali::ACanionVali()
 
 }
 
-
 // Called when the game starts or when spawned
 void ACanionVali::BeginPlay()
 {
 	Super::BeginPlay();
-
-
-
 	contador = 0;
 	tiempoCambio = 2;
 	GetWorldTimerManager().SetTimer(ManejoTiempoCambio, this, &ACanionVali::CambioDeEstado, tiempoCambio, true);
-
-
 
 }
 
