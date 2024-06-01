@@ -10,11 +10,6 @@ AStateDispararMisil::AStateDispararMisil()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	//meshCanion = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("CanonMesh"));
-	//meshCanion->SetupAttachment(RootComponent);
-	//static ConstructorHelpers::FObjectFinder<UStaticMesh> CanonMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cone.Shape_Cone'"));
-	//meshCanion->SetStaticMesh(CanonMesh.Object);
-	//RootComponent = meshCanion;
 
 	MaxProjectile = 1;
 	NumberFired = 0;

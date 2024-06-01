@@ -49,7 +49,7 @@ AProyectilHielo::AProyectilHielo()
 	Projectil_Movement->MaxSpeed = 850.0f;
 	Projectil_Movement->bRotationFollowsVelocity = true;
 	Projectil_Movement->bShouldBounce = false;
-	Projectil_Movement->ProjectileGravityScale = 0.0f;
+	Projectil_Movement->ProjectileGravityScale = 0.2f;
 
 	// Creando el componente de colisión del proyectil
 	Projectil_Collision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Projectil_Collision"));

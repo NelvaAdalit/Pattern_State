@@ -84,10 +84,12 @@ public:
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 public:
+
 	float LifePawn;
 	void Damage(float Damage);
 	void Componentes_Colision();
 	float GetHelth() const { return LifePawn; }		
+	
 
 };
 

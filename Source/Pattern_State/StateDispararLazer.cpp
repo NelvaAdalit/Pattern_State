@@ -52,7 +52,7 @@ void AStateDispararLazer::activarDispararLazer()
 			FRotator Rotation = CanionVali->GetActorRotation();
 			World->SpawnActor<AProyectilLazer>(Location, Rotation);
 			NumberFired++;
-
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Disparo Lazer"));
 			// Establecer el temporizador para el próximo disparo
 			FTimerHandle TimerHandle;
 			GetWorldTimerManager().SetTimer(TimerHandle, this, &AStateDispararLazer::DesactivarDisparoLazer, rand() % 6 + 1, false);

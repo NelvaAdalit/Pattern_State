@@ -25,8 +25,6 @@ public:
 
     virtual void EstablecerCanion(class ACanionVali* _CanionVali)=0;
 
-	
-
 	virtual void activarDispararHielo()=0;
 	virtual void activarDispararBala()=0;
 	virtual void activarDispararLazer()=0;

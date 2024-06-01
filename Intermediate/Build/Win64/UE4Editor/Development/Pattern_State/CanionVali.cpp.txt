@@ -11,9 +11,3 @@ D:\AVANZADA\Pattern_State\Source\Pattern_State\StateDispararLazer.h
 D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\StateDispararLazer.generated.h
 D:\AVANZADA\Pattern_State\Source\Pattern_State\StateDispararMisil.h
 D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\StateDispararMisil.generated.h
-D:\AVANZADA\Pattern_State\Source\Pattern_State\StateCambiarPosicionCanion.h
-D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\StateCambiarPosicionCanion.generated.h
-D:\AVANZADA\Pattern_State\Source\Pattern_State\StateVolverPosicionIncialCanion.h
-D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\StateVolverPosicionIncialCanion.generated.h
-D:\AVANZADA\Pattern_State\Source\Pattern_State\StateDesaparecerCanion.h
-D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\StateDesaparecerCanion.generated.h

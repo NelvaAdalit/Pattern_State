@@ -46,7 +46,7 @@ AProyectilBala::AProyectilBala()
 
 	// Controlando el movimiento del proyectil
 	Projectil_Movement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("Projectil_Movement"));
-	Projectil_Movement->InitialSpeed = 750.0f;
+	Projectil_Movement->InitialSpeed = 1050.0f;
 	Projectil_Movement->MaxSpeed = 850.0f;
 	Projectil_Movement->bRotationFollowsVelocity = true;
 	Projectil_Movement->bShouldBounce = false;

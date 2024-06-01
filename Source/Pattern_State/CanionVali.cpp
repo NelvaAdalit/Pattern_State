@@ -6,9 +6,7 @@
 #include "StateDispararBala.h"
 #include "StateDispararLazer.h"
 #include "StateDispararMisil.h"
-#include "StateCambiarPosicionCanion.h"
-#include "StateVolverPosicionIncialCanion.h"
-#include "StateDesaparecerCanion.h"
+
 
 // Sets default values
 ACanionVali::ACanionVali()
@@ -22,28 +20,24 @@ ACanionVali::ACanionVali()
 	meshCanion->SetStaticMesh(CanonMesh.Object);
 	SetActorRotation(FRotator(0.0f, 180.0f, 0.0f));
 	SetActorRelativeScale3D(FVector(4.0f, 4.0f,4.0f));
-	VolveraEmpezar = 0;
+
 
 }
+
 
 // Called when the game starts or when spawned
 void ACanionVali::BeginPlay()
 {
 	Super::BeginPlay();
 
+
+
 	contador = 0;
 	tiempoCambio = 2;
-	ReIniciarCambioDeEstado();
-	
 	GetWorldTimerManager().SetTimer(ManejoTiempoCambio, this, &ACanionVali::CambioDeEstado, tiempoCambio, true);
-	
-	StateDispararHielo = GetWorld()->SpawnActor<AStateDispararHielo>(AStateDispararHielo::StaticClass());
-	StateDispararBala = GetWorld()->SpawnActor<AStateDispararBala>(AStateDispararBala::StaticClass());
-	StateDispararLazer = GetWorld()->SpawnActor<AStateDispararLazer>(AStateDispararLazer::StaticClass());
-	StateDispararMisil = GetWorld()->SpawnActor<AStateDispararMisil>(AStateDispararMisil::StaticClass());
-	StateCambiarPosicionCanion = GetWorld()->SpawnActor<AStateCambiarPosicionCanion>(AStateCambiarPosicionCanion::StaticClass());
-	StateVolverPosiconInicialCanion = GetWorld()->SpawnActor<AStateVolverPosicionIncialCanion>(AStateVolverPosicionIncialCanion::StaticClass());
-	StateDesaparecerCanion = GetWorld()->SpawnActor<AStateDesaparecerCanion>(AStateDesaparecerCanion::StaticClass());
+
+
+
 }
 
 // Called every frame
@@ -107,40 +101,29 @@ void ACanionVali::InicializarCanion(FString _State)
 
 	if (_State.Equals("Dispararhielo")) {
 		//GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Blue, FString::Printf(TEXT("Se creo el estado DispararHielo")));
-
-		
+	    StateDispararHielo = GetWorld()->SpawnActor<AStateDispararHielo>(AStateDispararHielo::StaticClass());	
 		StateDispararHielo->EstablecerCanion(this);
 		EstablecerState(StateDispararHielo);
+		
 	}
 	else if (_State.Equals("DispararBala")) {
-		
+		StateDispararBala = GetWorld()->SpawnActor<AStateDispararBala>(AStateDispararBala::StaticClass());
 		StateDispararBala->EstablecerCanion(this);
 		EstablecerState(StateDispararBala);
+
 	}
 	else if (_State.Equals("DispararLazer")) {
-
+		StateDispararLazer = GetWorld()->SpawnActor<AStateDispararLazer>(AStateDispararLazer::StaticClass());
 		StateDispararLazer->EstablecerCanion(this);
 		EstablecerState(StateDispararLazer);
+
 	}
 	else if (_State.Equals("DispararMisil")) {
-		
+		StateDispararMisil = GetWorld()->SpawnActor<AStateDispararMisil>(AStateDispararMisil::StaticClass());
 		StateDispararMisil->EstablecerCanion(this);
 		EstablecerState(StateDispararMisil);
-	}
-	else if (_State.Equals("CambiarPosicionCanion")) {
-		
-		StateCambiarPosicionCanion->EstablecerCanion(this);
-		EstablecerState(StateCambiarPosicionCanion);
-	}	
-	else if (_State.Equals("VolverPosicionInicialCanion")) {
-		
-		StateVolverPosiconInicialCanion->EstablecerCanion(this);
-		EstablecerState(StateVolverPosiconInicialCanion);
-	}
-	else if (_State.Equals("DesaparecerCanion")) {
+
 	
-		StateDesaparecerCanion->EstablecerCanion(this);
-		EstablecerState(StateDesaparecerCanion);
 	}
 	else {
 		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Blue, FString::Printf(TEXT("No se pudo crear el estado")));
@@ -167,20 +150,7 @@ void ACanionVali::DesactivarDisparoMisil()
 	StateActual->DesactivarDisparoMisil();
 }
 
-void ACanionVali::DesactivarCambiarPosicionCanion()
-{
-	StateActual->DesactivarCambiarPosicionCanion();
-}
 
-void ACanionVali::DesactivarVolverPosiconInicialCanion()
-{
-	StateActual->DesactivarVolverPosiconInicialCanion();
-}
-
-void ACanionVali::DesactivarDesaparecerCanion()
-{
-	StateActual->DesactivarDesaparecerCanion();
-}
 
 IIState* ACanionVali::C_ObtenerEstado()
 {
@@ -208,20 +178,6 @@ IIState* ACanionVali::C_ObtenerStateDispararMisil()
 	return StateDispararMisil;
 }
 
-IIState* ACanionVali::C_ObtenerStateCambiarPosicionCanion()
-{
-	return StateCambiarPosicionCanion;
-}
-
-IIState* ACanionVali::C_ObtenerStateVolverPosiconInicialCanion()
-{
-	return StateVolverPosiconInicialCanion;
-}
-
-IIState* ACanionVali::C_ObtenerStateDesaparecerCanion()
-{
-	return StateDesaparecerCanion;
-}
 
 FString ACanionVali::C_ObtenerEstadoActual()
 {
@@ -236,8 +192,6 @@ FString ACanionVali::C_ObtenerEstadoActual()
 
 void ACanionVali::CambioDeEstado()
 {
-
-	
 	
 		if (contador == 0)
 		{
@@ -259,6 +213,7 @@ void ACanionVali::CambioDeEstado()
 		{
 			InicializarCanion("DispararLazer");
 			
+			GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Blue, FString::Printf(TEXT("Se creo el estado DispararLazer")));
 			//UE_LOG(LogTemp, Warning, TEXT("El estado actual es: %s"), *CanionVali->C_ObtenerEstadoActual());
 
 			activarDispararLazer();
@@ -280,12 +235,6 @@ void ACanionVali::CambioDeEstado()
 
 }
 
-
-void ACanionVali::ReIniciarCambioDeEstado()
-{
-
-	
-}
 	
 	
 
