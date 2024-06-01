@@ -1,0 +1,7 @@
+D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\Definitions.Pattern_State.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+D:\AVANZADA\Pattern_State\Source\Pattern_State/StateVolverPosicionIncialCanion.h
+D:\AVANZADA\Pattern_State\Source\Pattern_State\IState.h
+D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\IState.generated.h
+D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\StateVolverPosicionIncialCanion.generated.h

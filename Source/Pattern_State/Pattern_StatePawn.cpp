@@ -54,7 +54,7 @@ APattern_StatePawn::APattern_StatePawn()
 	GunOffset = FVector(90.f, 0.f, 0.f);
 	FireRate = 0.1f;
 	bCanFire = true;
-	LifePawn=250.0f;
+	LifePawn=50.0f;
 }
 
 void APattern_StatePawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)

@@ -1,0 +1,3 @@
+D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\Definitions.Pattern_State.h
+D:\AVANZADA\Pattern_State\Source\Pattern_State\IEstrategias.h
+D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\IEstrategias.generated.h

@@ -11,19 +11,9 @@ D:\AVANZADA\Pattern_State\Source\Pattern_State\StateDispararLazer.h
 D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\StateDispararLazer.generated.h
 D:\AVANZADA\Pattern_State\Source\Pattern_State\StateDispararMisil.h
 D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\StateDispararMisil.generated.h
-D:\AVANZADA\Pattern_State\Source\Pattern_State\ProyectilHielo.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/ProjectileMovementComponent.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ProjectileMovementComponent.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/CapsuleComponent.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CapsuleComponent.generated.h
-D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\ProyectilHielo.generated.h
-D:\AVANZADA\Pattern_State\Source\Pattern_State\ProyectilBala.h
-D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\ProyectilBala.generated.h
-D:\AVANZADA\Pattern_State\Source\Pattern_State\ProyectilLazer.h
-D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\ProyectilLazer.generated.h
-D:\AVANZADA\Pattern_State\Source\Pattern_State\Proyectil.h
-D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\Proyectil.generated.h
+D:\AVANZADA\Pattern_State\Source\Pattern_State\StateCambiarPosicionCanion.h
+D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\StateCambiarPosicionCanion.generated.h
+D:\AVANZADA\Pattern_State\Source\Pattern_State\StateVolverPosicionIncialCanion.h
+D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\StateVolverPosicionIncialCanion.generated.h
+D:\AVANZADA\Pattern_State\Source\Pattern_State\StateDesaparecerCanion.h
+D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\StateDesaparecerCanion.generated.h

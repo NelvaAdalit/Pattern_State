@@ -17,6 +17,7 @@ AStateDispararMisil::AStateDispararMisil()
 	//RootComponent = meshCanion;
 
 	MaxProjectile = 1;
+	NumberFired = 0;
 	bCanFire = true;
 
 //SetActorRelativeScale3D(FVector(2.0f, 2.0f, 2.0f));
@@ -44,13 +45,48 @@ void AStateDispararMisil::EstablecerCanion(ACanionVali* _CanionVali)
 	CanionVali->GetActorLocation();
 }
 
-void AStateDispararMisil::EstadoDispararMisil()
+void AStateDispararMisil::activarDispararMisil()
 {
-	CanionVali=Cast<ACanionVali>(StaticClass());
-	CanionVali->activarDispararMisil();
+	// creador de proycetiles
+	
+	if (bCanFire && NumberFired < MaxProjectile) {
+		bCanFire = false;  // Prevenir nuevos disparos hasta que el temporizador expire
+
+		// creador de proycetiles
+		UWorld* const World = GetWorld();
+		if (World != NULL)
+		{
+			FVector Location = CanionVali->GetActorLocation() + FVector(0, 0, 300);
+			FRotator Rotation = CanionVali->GetActorRotation();
+			World->SpawnActor<AProyectil>(Location, Rotation);
+			NumberFired++;
+
+			// Establecer el temporizador para el próximo disparo
+			FTimerHandle TimerHandle;
+			GetWorldTimerManager().SetTimer(TimerHandle, this, &AStateDispararMisil::DesactivarDisparoMisil, rand() % 6 + 1, false);
+
+
+
+
+
+
+		}
+	}
 }
 
-
+void AStateDispararMisil::DesactivarDisparoMisil()
+{
+	if (NumberFired < MaxProjectile)
+	{
+		bCanFire = true;  // Permitir el siguiente disparo
+		activarDispararMisil();         // Disparar automáticamente la siguiente bomba
+	}
+	else
+	{
+		NumberFired = 0;   // Reiniciar el contador de bombas para el próximo ciclo de disparos reabastecido
+		bCanFire = false;
+	}
+}
 
 FString AStateDispararMisil::ObtenerEstado()
 {

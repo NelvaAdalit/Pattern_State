@@ -33,19 +33,29 @@ protected:
 public:
 	virtual void EstablecerCanion(class ACanionVali* _CanionVali) override;
 
-	void EstadoDispararMisil() override;
-
+	void activarDispararMisil() override;
+	void DesactivarDisparoMisil() override;
 	virtual  FString ObtenerEstado() override;
 
 
 
 private:
-	virtual void EstadoDispararBala() override {};
-	virtual void EstadoDispararLazer() override {};
-	virtual void EstadoDispararHielo() override {};
-
+	virtual void activarDispararBala() override {};
+	virtual void activarDispararLazer() override {};
+	virtual void activarDispararHielo() override {};
+	virtual void activarCambiarPosicionCanion() override {};
+	virtual void activarVolverPosiconInicialCanion() override {};
+	virtual void activarDesaparecerCanion() override {};
 
 	void InicializarCanion(FString _State) override {};
+
+
+	virtual void DesactivarDisparoBala() override {};
+	virtual void DesactivarDisparoLazer() override {};
+	virtual void DesactivarDisparoHielo() override {};
+	virtual void DesactivarCambiarPosicionCanion() override {};
+	virtual void DesactivarVolverPosiconInicialCanion() override {};
+	virtual void DesactivarDesaparecerCanion() override {};
 
 
 
