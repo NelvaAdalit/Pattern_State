@@ -37,7 +37,7 @@ void AStateDispararBala::EstablecerCanion(ACanionVali* _CanionVali)
 	UE_LOG(LogTemp, Warning, TEXT("Disparando Bala"));
 }
 
-void AStateDispararBala::activarDispararBala()
+void AStateDispararBala::DispararBala()
 {
 	if (bCanFire && NumberFired < MaxProjectile) {
 		bCanFire = false;  // Prevenir nuevos disparos hasta que el temporizador expire
@@ -73,7 +73,7 @@ void AStateDispararBala::DesactivarDisparoBala()
 	if (NumberFired < MaxProjectile)
 	{
 		bCanFire = true;
-		activarDispararBala();
+		DispararBala();
 	}
 	else
 	{

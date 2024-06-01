@@ -30,7 +30,7 @@ private:
 public:
 	virtual void EstablecerCanion(class ACanionVali* _CanionVali) override;
 
-	void activarDispararHielo() override;
+	void DispararHielo() override;
 
 	virtual  FString ObtenerEstado() override;
 
@@ -41,32 +41,26 @@ public:
 
 private:
 	//cambiar protecteed
-	virtual void activarDispararBala() override {};
-	virtual void activarDispararLazer() override {};
-	virtual void activarDispararMisil() override {};
-	virtual void activarCambiarPosicionCanion() override {};
-	virtual void activarVolverPosiconInicialCanion() override {};
-	virtual void activarDesaparecerCanion() override {};
+	virtual void DispararBala() override {};
+	virtual void DispararLazer() override {};
+	virtual void DispararMisil() override {};
 
 	void InicializarCanion(FString _State) override {};
 
 	virtual void DesactivarDisparoBala() override {};
 	virtual void DesactivarDisparoLazer() override {};
 	virtual void DesactivarDisparoMisil() override {};
-	virtual void DesactivarCambiarPosicionCanion() override {};
-	virtual void DesactivarVolverPosiconInicialCanion() override {};
-	virtual void DesactivarDesaparecerCanion() override {};
+
 
 
 
 
 public:
-	int dureza;
 	int cantidadProyectiles;
-	uint32 bCanFire : 1;//entero de 32 bits
+	uint32 bCanFire : 1;
 	float FireRate;
 	int MaxProjectile;
-	int direccion = 1;
+	int NumberFired;
 	float velocidad = 8;
 	FTimerHandle TimerHandle_ShotTimerExpired;
 

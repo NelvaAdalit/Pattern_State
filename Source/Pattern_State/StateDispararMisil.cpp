@@ -40,7 +40,7 @@ void AStateDispararMisil::EstablecerCanion(ACanionVali* _CanionVali)
 	CanionVali->GetActorLocation();
 }
 
-void AStateDispararMisil::activarDispararMisil()
+void AStateDispararMisil::DispararMisil()
 {
 	// creador de proycetiles
 	
@@ -74,7 +74,7 @@ void AStateDispararMisil::DesactivarDisparoMisil()
 	if (NumberFired < MaxProjectile)
 	{
 		bCanFire = true;  // Permitir el siguiente disparo
-		activarDispararMisil();         // Disparar automáticamente la siguiente bomba
+		DispararMisil();         // Disparar automáticamente la siguiente bomba
 	}
 	else
 	{

@@ -262,9 +262,9 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt"
-"D:\AVANZADA\Pattern_State\Source\Pattern_State\StateDispararBala.cpp"
+"D:\AVANZADA\Pattern_State\Source\Pattern_State\StateDispararHielo.cpp"
 /FI"D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\Definitions.h"
-/Fo"D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\StateDispararBala.cpp.obj"
+/Fo"D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\StateDispararHielo.cpp.obj"
 /TP
 /GR-
 /W4

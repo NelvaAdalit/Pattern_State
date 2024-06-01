@@ -39,7 +39,7 @@ void AStateDispararLazer::EstablecerCanion(ACanionVali* _CanionVali)
 }
 
 
-void AStateDispararLazer::activarDispararLazer()
+void AStateDispararLazer::DispararLazer()
 {
 	if (bCanFire && NumberFired < MaxProjectile) {
 		bCanFire = false;  // Prevenir nuevos disparos hasta que el temporizador expire
@@ -71,7 +71,7 @@ void AStateDispararLazer::DesactivarDisparoLazer()
 	if (NumberFired < MaxProjectile)
 	{
 		bCanFire = true;  
-		activarDispararLazer(); 
+		DispararLazer(); 
 	}
 	else
 	{

@@ -56,7 +56,7 @@ void ACanionVali::EstablecerState(IIState* _State)
 
 void ACanionVali::activarDispararHielo()
 {
-	StateActual->activarDispararHielo();
+	StateActual->DispararHielo();
 
 	//UE_LOG(LogTemp, Warning, TEXT("Disparando Hielo del canonvali"));
 
@@ -64,36 +64,19 @@ void ACanionVali::activarDispararHielo()
 
 void ACanionVali::activarDispararBala()
 {
-	StateActual->activarDispararBala();
+	StateActual->DispararBala();
 	UE_LOG(LogTemp, Warning, TEXT("Disparando Bala del canonvali"));
 }
 
 void ACanionVali::activarDispararLazer()
 {
-	StateActual->activarDispararLazer();
+	StateActual->DispararLazer();
 }
 
 void ACanionVali::activarDispararMisil()
 {
-	StateActual->activarDispararMisil();
-	
+	StateActual->DispararMisil();
 }
-
-void ACanionVali::activarCambiarPosicionCanion()
-{
-	StateActual->activarCambiarPosicionCanion();
-}
-
-void ACanionVali::activarVolverPosiconInicialCanion()
-{
-	StateActual->activarVolverPosiconInicialCanion();
-}
-
-void ACanionVali::activarDesaparecerCanion()
-{
-	StateActual->activarDesaparecerCanion();
-}
-
 
 
 void ACanionVali::InicializarCanion(FString _State)

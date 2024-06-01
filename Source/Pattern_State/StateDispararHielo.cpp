@@ -40,7 +40,7 @@ void AStateDispararHielo::EstablecerCanion(ACanionVali* _CanionVali)
 
 }
 
-void AStateDispararHielo::activarDispararHielo()
+void AStateDispararHielo::DispararHielo()
 {
 	//UE_LOG(LogTemp, Warning, TEXT("Disparando Hielo del state disparar hielo"));
 
@@ -76,9 +76,6 @@ void AStateDispararHielo::activarDispararHielo()
 
 
 
-
-
-
 FString AStateDispararHielo::ObtenerEstado()
 {
 	return "Canion Proyectil Hielo";
@@ -89,7 +86,7 @@ void AStateDispararHielo::DesactivarDisparoHielo()
 	if (NumberFired < MaxProjectile)
 	{
 		bCanFire = true;
-		activarDispararHielo();
+		DispararHielo();
 	}
 	else
 	{
