@@ -51,12 +51,12 @@ APattern_StatePawn::APattern_StatePawn()
 	CameraComponent->bUsePawnControlRotation = false;	// Camera does not rotate relative to arm
 
 	// Movement
-	MoveSpeed = 1000.0f;
+	MoveSpeed = 800.0f;
 	// Weapon
 	GunOffset = FVector(90.f, 0.f, 0.f);
 	FireRate = 0.1f;
 	bCanFire = true;
-	LifePawn=50.0f;
+	LifePawn=150.0f;
 }
 
 void APattern_StatePawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -128,12 +128,14 @@ void APattern_StatePawn::FireShot(FVector FireDirection)
 			const FRotator FireRotation = FireDirection.Rotation();
 			// Spawn projectile at an offset from this pawn
 			const FVector SpawnLocation = GetActorLocation() + FireRotation.RotateVector(GunOffset);
+			
 
 			UWorld* const World = GetWorld();
 			if (World != nullptr)
 			{
 				// spawn the projectile
 				World->SpawnActor<APattern_StateProjectile>(SpawnLocation, FireRotation);
+				//World ->SpawnActor<APattern_StateProjectile>(SpawnLocation + FVector(0, 0, 190), FireRotation+FVector(0, 0, 190));
 			}
 
 			bCanFire = false;

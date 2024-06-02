@@ -65,5 +65,6 @@ public:
 	virtual void NotifyActorBeginOverlap(AActor* OtherActor);
 
 	virtual void DestroyPROYECTIL();
+	//void FireInDirection(const FVector& ShootDirection);
 
 };

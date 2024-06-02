@@ -107,3 +107,8 @@ void AProyectilHielo::DestroyPROYECTIL()
 	Destroy();
 }
 
+//void AProyectilHielo::FireInDirection(const FVector& ShootDirection)
+//{
+//
+//}
+

@@ -26,6 +26,16 @@ public:
 public:
 	void EjecutarE()override;
 public:
-	class APattern_StatePawn* PawnJugador;
+	class APattern_StatePawn* PawnJugador; 
+	void DesactivarDisparoExtra() ;
+	
+public:
+	int cantidadProyectiles;
+	uint32 bCanFire : 1;
+	float FireRate;
+	int MaxProjectile;
+	int NumberFired;
+	float velocidad = 8;
+	FTimerHandle TimerHandle_ShotTimerExpired;
 
 };

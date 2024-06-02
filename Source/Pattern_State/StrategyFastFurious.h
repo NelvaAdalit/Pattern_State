@@ -28,4 +28,6 @@ public:
 	void EjecutarE() override;
 public:
 	class APattern_StatePawn* PawnJugador;
+	void DesactivarEstrategia();
+	float VelocidadoriginaldelJugador;
 };

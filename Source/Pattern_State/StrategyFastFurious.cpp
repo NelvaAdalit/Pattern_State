@@ -5,6 +5,7 @@
 #include "Pattern_StatePawn.h"
 #include "Kismet/GameplayStatics.h"
 
+
 // Sets default values
 AStrategyFastFurious::AStrategyFastFurious()
 {
@@ -30,8 +31,22 @@ void AStrategyFastFurious::Tick(float DeltaTime)
 void AStrategyFastFurious::EjecutarE()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 20.f, FColor::Green, FString::Printf(TEXT("EstrategiaFastAndFurious")));
-	PawnJugador= Cast<APattern_StatePawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));
-	PawnJugador->MoveSpeed +=20;
-
+	PawnJugador = Cast<APattern_StatePawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));
+	VelocidadoriginaldelJugador = PawnJugador->MoveSpeed;
+	PawnJugador->MoveSpeed += 12;
+	FTimerHandle DesactivarAumentoDeVelocidad;
+	PawnJugador->GetWorldTimerManager().SetTimer(DesactivarAumentoDeVelocidad, this, &AStrategyFastFurious::DesactivarEstrategia, 5.0f, false);
 }
 
+void AStrategyFastFurious::DesactivarEstrategia()
+{
+	if (PawnJugador) {
+
+		PawnJugador->MoveSpeed = VelocidadoriginaldelJugador;
+		GEngine->AddOnScreenDebugMessage(-1, 20.f, FColor::Red, TEXT("Estrategia desactivada: Velocidad restaurada"));
+	}
+	
+	
+		
+
+}
