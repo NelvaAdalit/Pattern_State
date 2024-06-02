@@ -20,7 +20,7 @@
 #include "StrategyDefensivaExtrema.h"
 #include "IStrategyVelocity.h"
 #include "EstrategiaDefensivaDecisiva.h"
-
+#include "EstrategiaVelocity2.h"
 
 const FName APattern_StatePawn::MoveForwardBinding("MoveForward");
 const FName APattern_StatePawn::MoveRightBinding("MoveRight");
@@ -84,7 +84,7 @@ void APattern_StatePawn::SetupPlayerInputComponent(class UInputComponent* Player
 
 
 	PlayerInputComponent->BindAction("Estrategia3", IE_Pressed, this, &APattern_StatePawn::Handle3);
-
+	PlayerInputComponent->BindAction("Estrategia4", IE_Pressed, this, &APattern_StatePawn::Handle4);
 
 
 
@@ -262,6 +262,7 @@ void APattern_StatePawn::EmplearVelocidad()
 	if (EstrategiaVelocity)
 	{
 		EstrategiaVelocity->MoveE();
+
 	}
 }
 
@@ -271,13 +272,17 @@ void APattern_StatePawn::Handle3()
 	FastFurious = GetWorld()->SpawnActor<AStrategyFastFurious>(AStrategyFastFurious::StaticClass());
 	AlterarVelocidad(FastFurious);
 	EmplearVelocidad();
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("Estrategia FastFurious"));
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("Estrategia FastFurious"));
 
 }
 
 void APattern_StatePawn::Handle4()
 {
+	Velocity2 = GetWorld()->SpawnActor<AEstrategiaVelocity2>(AEstrategiaVelocity2::StaticClass());
+	AlterarVelocidad(Velocity2);
+	EmplearVelocidad();
+
+//	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, TEXT("Estrategia ZigZag"));
 
 }
 
-//

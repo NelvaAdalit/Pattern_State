@@ -39,3 +39,5 @@ D:\AVANZADA\Pattern_State\Source\Pattern_State\StrategyDefensivaExtrema.h
 D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\StrategyDefensivaExtrema.generated.h
 D:\AVANZADA\Pattern_State\Source\Pattern_State\EstrategiaDefensivaDecisiva.h
 D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\EstrategiaDefensivaDecisiva.generated.h
+D:\AVANZADA\Pattern_State\Source\Pattern_State\EstrategiaVelocity2.h
+D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\EstrategiaVelocity2.generated.h

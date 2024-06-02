@@ -87,7 +87,7 @@ public:
 public:
 	void Damage(float Damage);
 	void Componentes_Colision();
-
+	
 	float LifePawn;
 
 	float GetHelth() const { 
@@ -110,10 +110,11 @@ private:
 
 	//PatternStrategy
 	class IIStrategy* Estrategia;
-	class AStrategyFastFurious* FastFurious;
-	class AStrategyDefensivaExtrema* _DefensivaExtrema;
-	class IIStrategy* Estrategia2;
 	class AEstrategiaDefensivaDecisiva* DefensivaDecisiva;
+	class AStrategyDefensivaExtrema* _DefensivaExtrema;
+
+
+
 
 public:
 
@@ -126,6 +127,8 @@ public:
 public:
 
 	class IIStrategyVelocity* EstrategiaVelocity;
+	class AStrategyFastFurious* FastFurious;
+	class AEstrategiaVelocity2* Velocity2;
 	void AlterarVelocidad(AActor*_EstrategiaChoose);
 	void EmplearVelocidad();
 	void Handle3();
