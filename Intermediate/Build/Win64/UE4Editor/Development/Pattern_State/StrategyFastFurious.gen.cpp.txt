@@ -2,6 +2,6 @@ D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
 D:\AVANZADA\Pattern_State\Source\Pattern_State/StrategyFastFurious.h
-D:\AVANZADA\Pattern_State\Source\Pattern_State\IStrategy.h
-D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\IStrategy.generated.h
+D:\AVANZADA\Pattern_State\Source\Pattern_State\IStrategyVelocity.h
+D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\IStrategyVelocity.generated.h
 D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\StrategyFastFurious.generated.h

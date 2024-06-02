@@ -28,14 +28,16 @@ void AStrategyFastFurious::Tick(float DeltaTime)
 
 }
 
-void AStrategyFastFurious::EjecutarE()
+void AStrategyFastFurious::MoveE()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 20.f, FColor::Green, FString::Printf(TEXT("EstrategiaFastAndFurious")));
 	PawnJugador = Cast<APattern_StatePawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));
 	VelocidadoriginaldelJugador = PawnJugador->MoveSpeed;
-	PawnJugador->MoveSpeed += 12;
+	PawnJugador->MoveSpeed += 630;
 	FTimerHandle DesactivarAumentoDeVelocidad;
-	PawnJugador->GetWorldTimerManager().SetTimer(DesactivarAumentoDeVelocidad, this, &AStrategyFastFurious::DesactivarEstrategia, 5.0f, false);
+	PawnJugador->GetWorldTimerManager().SetTimer(DesactivarAumentoDeVelocidad, this, &AStrategyFastFurious::DesactivarEstrategia, 10.0f, false);
+	PawnJugador->LifePawn -= 4;
+
 }
 
 void AStrategyFastFurious::DesactivarEstrategia()

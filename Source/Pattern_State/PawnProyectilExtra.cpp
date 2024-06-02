@@ -20,7 +20,7 @@ APawnProyectilExtra::APawnProyectilExtra()
     mallaProyectil = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ProjectileMesh"));
     mallaProyectil->SetStaticMesh(ProjectileMeshAsset.Object);
     mallaProyectil->SetupAttachment(RootComponent);
-    velocidadDisparo = -800;
+    velocidadDisparo = 800;
     Disparodano = 20;
     mallaProyectil->SetRelativeScale3D(FVector(0.8f, 0.8f, 0.8f));
 
@@ -47,8 +47,20 @@ void APawnProyectilExtra::Tick(float DeltaTime)
 void APawnProyectilExtra::movimento(float DeltaTime)
 {
    
+    FVector CurrentLocation = GetActorLocation();
+    FVector ForwardDirection = GetActorForwardVector();
 
-    FVector NewLocation = GetActorLocation() + -GetActorForwardVector() * velocidadDisparo * GetWorld()->GetDeltaSeconds();
+    // Calcular la nueva ubicación con movimiento sinusoidal
+    float Time = GetWorld()->GetTimeSeconds();
+    float Amplitude = 10.0f; // Amplitud de la onda senoidal
+    float Frequency = 2.0f;   // Frecuencia de la onda senoidal
+
+    // Vector lateral (derecha) del actor
+    FVector RightVector = GetActorRightVector();
+    FVector Offset = RightVector * FMath::Sin(Time * Frequency) * Amplitude;
+
+    // Nueva ubicación combinando el movimiento hacia adelante y el desplazamiento sinusoidal
+    FVector NewLocation = CurrentLocation + (ForwardDirection * velocidadDisparo * DeltaTime) + Offset;
     SetActorLocation(NewLocation);
 
 

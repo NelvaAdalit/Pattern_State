@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "Pattern_StatePawn.generated.h"
 
+
 UCLASS(Blueprintable)
 class APattern_StatePawn : public APawn
 {
@@ -95,7 +96,12 @@ public:
 		return LifePawn; 
 	}		
 	
+	float EnergyPawn=200;
 
+	float GetEnergy() const {
+
+		return EnergyPawn;
+	}
 
 private:
 	//Puntero a la interfaz estrategia
@@ -105,12 +111,25 @@ private:
 	//PatternStrategy
 	class IIStrategy* Estrategia;
 	class AStrategyFastFurious* FastFurious;
-	class AEstrategyDefensivaExtrema* _EstrategiaDefensivaExtrema;
+	class AStrategyDefensivaExtrema* _DefensivaExtrema;
+	class IIStrategy* Estrategia2;
+	class AEstrategiaDefensivaDecisiva* DefensivaDecisiva;
 
 public:
 
 	void CambiarEstrategia(AActor* _EstrategiaElegida);
 	void EjecutarEstrategia();
+	void Handle1();
+	void Handle2();
+
+
+public:
+
+	class IIStrategyVelocity* EstrategiaVelocity;
+	void AlterarVelocidad(AActor*_EstrategiaChoose);
+	void EmplearVelocidad();
+	void Handle3();
+	void Handle4();
 
 };
 

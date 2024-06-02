@@ -2,13 +2,13 @@
 
 #pragma once
 
-#include "IStrategy.h"
+#include "IStrategyVelocity.h"
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "StrategyFastFurious.generated.h"
 
 UCLASS()
-class PATTERN_STATE_API AStrategyFastFurious : public AActor, public IIStrategy
+class PATTERN_STATE_API AStrategyFastFurious : public AActor,public IIStrategyVelocity
 {
 	GENERATED_BODY()
 
@@ -24,8 +24,8 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 public:
+	void MoveE() override;
 
-	void EjecutarE() override;
 public:
 	class APattern_StatePawn* PawnJugador;
 	void DesactivarEstrategia();

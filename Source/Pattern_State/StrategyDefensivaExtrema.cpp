@@ -55,19 +55,16 @@ void AStrategyDefensivaExtrema::EjecutarE()
 			FTimerHandle TimerHandle;
 			GetWorldTimerManager().SetTimer(TimerHandle, this, &AStrategyDefensivaExtrema::DesactivarDisparoExtra, 0.2f, false);
 
-
-
-
-
-
 		}
 	}
+	PawnJugador ->EnergyPawn -= 8;
 }
 
 void AStrategyDefensivaExtrema::DesactivarDisparoExtra()
 {
 	bCanFire = true;
 	NumberFired = 0;
+
 	
 }
 

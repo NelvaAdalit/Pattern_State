@@ -17,9 +17,3 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFra
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
 D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\Pattern_StatePawn.generated.h
-D:\AVANZADA\Pattern_State\Source\Pattern_State\StrategyFastFurious.h
-D:\AVANZADA\Pattern_State\Source\Pattern_State\IStrategy.h
-D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\IStrategy.generated.h
-D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\StrategyFastFurious.generated.h
-D:\AVANZADA\Pattern_State\Source\Pattern_State\StrategyDefensivaExtrema.h
-D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Inc\Pattern_State\StrategyDefensivaExtrema.generated.h

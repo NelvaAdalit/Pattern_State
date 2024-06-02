@@ -23,4 +23,5 @@ class PATTERN_STATE_API IIStrategy
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
 	virtual void EjecutarE() = 0;
+
 };

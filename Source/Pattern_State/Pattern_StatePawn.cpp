@@ -16,7 +16,10 @@
 #include "Sound/SoundBase.h"
 #include "IStrategy.h"
 #include "Engine/World.h"
-
+#include "StrategyFastFurious.h"
+#include "StrategyDefensivaExtrema.h"
+#include "IStrategyVelocity.h"
+#include "EstrategiaDefensivaDecisiva.h"
 
 
 const FName APattern_StatePawn::MoveForwardBinding("MoveForward");
@@ -56,7 +59,7 @@ APattern_StatePawn::APattern_StatePawn()
 	GunOffset = FVector(90.f, 0.f, 0.f);
 	FireRate = 0.1f;
 	bCanFire = true;
-	LifePawn=150.0f;
+	LifePawn=200.0f;
 }
 
 void APattern_StatePawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -68,7 +71,26 @@ void APattern_StatePawn::SetupPlayerInputComponent(class UInputComponent* Player
 	PlayerInputComponent->BindAxis(MoveRightBinding);
 	PlayerInputComponent->BindAxis(FireForwardBinding);
 	PlayerInputComponent->BindAxis(FireRightBinding);
+
+	//first family Disparo teclas 8 y 6
+	 
+	PlayerInputComponent->BindAction("Estrategia1", IE_Pressed, this, &APattern_StatePawn::Handle1);
+
+	PlayerInputComponent->BindAction("Estrategia2", IE_Pressed, this, &APattern_StatePawn::Handle2);
+
+
+
+	//second family OF STRATEGYMovimiento veloz
+
+
+	PlayerInputComponent->BindAction("Estrategia3", IE_Pressed, this, &APattern_StatePawn::Handle3);
+
+
+
+
+
 }
+
 
 void APattern_StatePawn::Tick(float DeltaSeconds)
 {
@@ -78,7 +100,20 @@ void APattern_StatePawn::Tick(float DeltaSeconds)
 		Componentes_Colision();
 	
 	}
-//	GEngine->AddOnScreenDebugMessage(-1,0.f,FColor::Cyan,FString::Printf(TEXT("Vida:%f"),LifePawn));
+
+	GEngine->AddOnScreenDebugMessage(-1, 0.f, FColor::Cyan, FString::Printf(TEXT("Vida:%f"), LifePawn));
+
+	if (EnergyPawn >= 0)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 0.f, FColor::Cyan, FString::Printf(TEXT("El porcentaje de Energia que tenes es:%f"), EnergyPawn));
+
+	}
+	else if(EnergyPawn==100) {
+		GEngine->AddOnScreenDebugMessage(-1, 0.f, FColor::Red, FString::Printf(TEXT("Peligro!! de Energia que tenes es bajo :%f"), EnergyPawn));
+	
+	}
+	
+
 
 
 
@@ -192,3 +227,57 @@ void APattern_StatePawn::EjecutarEstrategia()
 	}
 }
 
+void APattern_StatePawn::Handle1()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, TEXT("Estrategia Defensiva Extrema"));
+	_DefensivaExtrema = GetWorld()->SpawnActor<AStrategyDefensivaExtrema>(AStrategyDefensivaExtrema::StaticClass());
+	CambiarEstrategia(_DefensivaExtrema);
+	EjecutarEstrategia();
+
+
+	
+}
+
+void APattern_StatePawn::Handle2()
+{
+
+
+
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Black, TEXT("Estrategia Defensiva Decisiva"));
+	DefensivaDecisiva = GetWorld()->SpawnActor<AEstrategiaDefensivaDecisiva>(AEstrategiaDefensivaDecisiva::StaticClass());
+	CambiarEstrategia(DefensivaDecisiva);
+	EjecutarEstrategia();
+
+}
+
+
+void APattern_StatePawn::AlterarVelocidad(AActor* _EstrategiaChoose)
+{
+		EstrategiaVelocity = Cast<IIStrategyVelocity>(_EstrategiaChoose);
+
+}
+
+void APattern_StatePawn::EmplearVelocidad()
+{
+	if (EstrategiaVelocity)
+	{
+		EstrategiaVelocity->MoveE();
+	}
+}
+
+void APattern_StatePawn::Handle3()
+{
+
+	FastFurious = GetWorld()->SpawnActor<AStrategyFastFurious>(AStrategyFastFurious::StaticClass());
+	AlterarVelocidad(FastFurious);
+	EmplearVelocidad();
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("Estrategia FastFurious"));
+
+}
+
+void APattern_StatePawn::Handle4()
+{
+
+}
+
+//

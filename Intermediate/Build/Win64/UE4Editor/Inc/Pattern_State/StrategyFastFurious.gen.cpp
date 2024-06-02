@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeStrategyFastFurious() {}
 	PATTERN_STATE_API UClass* Z_Construct_UClass_AStrategyFastFurious();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_Pattern_State();
-	PATTERN_STATE_API UClass* Z_Construct_UClass_UIStrategy_NoRegister();
+	PATTERN_STATE_API UClass* Z_Construct_UClass_UIStrategyVelocity_NoRegister();
 // End Cross Module References
 	void AStrategyFastFurious::StaticRegisterNativesAStrategyFastFurious()
 	{
@@ -47,7 +47,7 @@ void EmptyLinkFunctionForGeneratedCodeStrategyFastFurious() {}
 	};
 #endif
 		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AStrategyFastFurious_Statics::InterfaceParams[] = {
-			{ Z_Construct_UClass_UIStrategy_NoRegister, (int32)VTABLE_OFFSET(AStrategyFastFurious, IIStrategy), false },
+			{ Z_Construct_UClass_UIStrategyVelocity_NoRegister, (int32)VTABLE_OFFSET(AStrategyFastFurious, IIStrategyVelocity), false },
 		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AStrategyFastFurious_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AStrategyFastFurious>::IsAbstract,
@@ -76,7 +76,7 @@ void EmptyLinkFunctionForGeneratedCodeStrategyFastFurious() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AStrategyFastFurious, 2477809494);
+	IMPLEMENT_CLASS(AStrategyFastFurious, 3037274918);
 	template<> PATTERN_STATE_API UClass* StaticClass<AStrategyFastFurious>()
 	{
 		return AStrategyFastFurious::StaticClass();
