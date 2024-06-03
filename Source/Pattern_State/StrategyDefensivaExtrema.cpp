@@ -57,6 +57,8 @@ void AStrategyDefensivaExtrema::EjecutarE()
 
 		}
 	}
+
+
 	PawnJugador ->EnergyPawn -= 8;
 }
 

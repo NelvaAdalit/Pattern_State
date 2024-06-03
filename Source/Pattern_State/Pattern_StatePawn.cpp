@@ -75,7 +75,6 @@ void APattern_StatePawn::SetupPlayerInputComponent(class UInputComponent* Player
 	//first family Disparo teclas 8 y 6
 	 
 	PlayerInputComponent->BindAction("Estrategia1", IE_Pressed, this, &APattern_StatePawn::Handle1);
-
 	PlayerInputComponent->BindAction("Estrategia2", IE_Pressed, this, &APattern_StatePawn::Handle2);
 
 
@@ -227,6 +226,7 @@ void APattern_StatePawn::EjecutarEstrategia()
 	}
 }
 
+
 void APattern_StatePawn::Handle1()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, TEXT("Estrategia Defensiva Extrema"));
@@ -237,6 +237,8 @@ void APattern_StatePawn::Handle1()
 
 	
 }
+//state cambia internamente y strategia cambia externamente
+
 
 void APattern_StatePawn::Handle2()
 {
@@ -245,6 +247,7 @@ void APattern_StatePawn::Handle2()
 
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Black, TEXT("Estrategia Defensiva Decisiva"));
 	DefensivaDecisiva = GetWorld()->SpawnActor<AEstrategiaDefensivaDecisiva>(AEstrategiaDefensivaDecisiva::StaticClass());
+
 	CambiarEstrategia(DefensivaDecisiva);
 	EjecutarEstrategia();
 

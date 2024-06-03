@@ -40,6 +40,8 @@ public:
 
 
 
+	int NumberFired;
+
 
 
 

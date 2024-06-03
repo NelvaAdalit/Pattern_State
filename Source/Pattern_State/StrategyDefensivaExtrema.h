@@ -27,6 +27,7 @@ public:
 	void EjecutarE()override;
 public:
 	class APattern_StatePawn* PawnJugador; 
+
 	void DesactivarDisparoExtra() ;
 	
 public:
