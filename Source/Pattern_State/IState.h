@@ -24,6 +24,7 @@ class PATTERN_STATE_API IIState
 public:
 
     virtual void EstablecerCanion(class ACanionVali* _CanionVali)=0;
+
 	virtual void DispararHielo()=0;
 	virtual void DispararBala()=0;
 	virtual void DispararLazer()=0;
@@ -38,8 +39,6 @@ public:
 	virtual void DesactivarDisparoMisil()=0;
 
 
-
-	int NumberFired;
 
 
 

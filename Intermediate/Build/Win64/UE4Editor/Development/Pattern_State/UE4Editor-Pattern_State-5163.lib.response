@@ -3,7 +3,7 @@
 /MACHINE:x64
 /SUBSYSTEM:WINDOWS
 /DEF
-/NAME:"UE4Editor-Pattern_State-0039.dll"
+/NAME:"UE4Editor-Pattern_State-5163.dll"
 /IGNORE:4221
 /NODEFAULTLIB
 "D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\Pattern_StateEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
@@ -50,4 +50,4 @@
 "D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\StrategyDefensivaExtrema.gen.cpp.obj"
 "D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\StrategyFastFurious.gen.cpp.obj"
 "D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\Default.rc2.res"
-/OUT:"D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\UE4Editor-Pattern_State-0039.lib"
+/OUT:"D:\AVANZADA\Pattern_State\Intermediate\Build\Win64\UE4Editor\Development\Pattern_State\UE4Editor-Pattern_State-5163.lib"

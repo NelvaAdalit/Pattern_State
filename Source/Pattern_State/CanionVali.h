@@ -55,9 +55,6 @@ public:
 	void activarDispararBala();
 	void activarDispararLazer();
 	void activarDispararMisil();
-	void activarCambiarPosicionCanion();
-	void activarVolverPosiconInicialCanion();
-	void activarDesaparecerCanion();
    void InicializarCanion(FString _State) ;
 
 	void DesactivarDisparoHielo();

@@ -73,12 +73,12 @@ void AStateDispararMisil::DesactivarDisparoMisil()
 {
 	if (NumberFired < MaxProjectile)
 	{
-		bCanFire = true;  // Permitir el siguiente disparo
-		DispararMisil();         // Disparar automáticamente la siguiente bomba
+		bCanFire = true;  
+		DispararMisil();         
 	}
 	else
 	{
-		NumberFired = 0;   // Reiniciar el contador de bombas para el próximo ciclo de disparos reabastecido
+		NumberFired = 0;   
 		bCanFire = false;
 	}
 }
